@@ -1,98 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>The Concierge</title>
+
+<!-- วาง STYLE ตรงนี้ -->
 <style>
-
-/* ===== BODY ===== */
-body{
-margin:0;
-font-family:'Segoe UI','Helvetica Neue',sans-serif;
-background:linear-gradient(135deg,#1e4ed8,#0b3d91);
-color:white;
-text-align:center;
-}
-
-/* ===== MENU BUTTON ===== */
-.menu-btn{
-position:fixed;
-top:25px;
-left:25px;
-font-size:28px;
-cursor:pointer;
-z-index:1000;
-color:white;
-}
-
-/* ===== SIDEBAR ===== */
-.sidebar{
-height:100%;
-width:0;
-position:fixed;
-top:0;
-left:0;
-background:#062c6f;
-overflow-x:hidden;
-transition:0.3s;
-padding-top:80px;
-}
-
-.sidebar a{
-display:block;
-color:white;
-padding:18px;
-text-decoration:none;
-font-size:18px;
-}
-
-.sidebar a:hover{
-background:#0b3d91;
-}
-
-/* ===== HEADER ===== */
-.header{
-padding:70px 20px 30px 20px;
-}
-
-.header h1{
-margin:0;
-font-size:36px;
-letter-spacing:2px;
-}
-
-.header h2{
-margin:5px 0 40px 0;
-font-size:16px;
-font-weight:normal;
-}
-
-/* ===== CONTAINER ===== */
-.container{
-max-width:600px;
-margin:0 auto 60px auto;
-padding:20px;
-}
-
-/* ===== CARD ===== */
-.card{
-background:white;
-color:#0b3d91;
-border-radius:20px;
-padding:25px;
-margin:20px 0;
-text-decoration:none;
-display:block;
-font-size:18px;
-font-weight:600;
-transition:0.3s;
-box-shadow:0 8px 20px rgba(0,0,0,0.2);
-}
-
-.card:hover{
-transform:scale(1.03);
-background:#f3f3f3;
-}
-
-/* ===== MOBILE ===== */
-@media (max-width:600px){
-.header h1{font-size:26px;}
-.card{font-size:16px;}
-}
-
+/* ใส่ CSS ที่ผมให้คุณล่าสุดตรงนี้ */
 </style>
+
+</head>
+
+<body>
+
+<!-- ปุ่มเมนู -->
+<div class="menu-btn" onclick="openNav()">☰</div>
+
+<!-- Sidebar -->
+<div id="mySidebar" class="sidebar">
+<a href="javascript:void(0)" onclick="closeNav()">Close ×</a>
+<a href="historical.html">Historical</a>
+<a href="mall.html">Mall</a>
+<a href="park.html">Park</a>
+<a href="market.html">Market</a>
+<a href="restaurant.html">Restaurant</a>
+</div>
+
+<!-- Header -->
+<div class="header">
+<h1>THE CONCIERGE</h1>
+<h2>HILTON BANGKOK GRANDE ASOKE</h2>
+</div>
+
+<!-- IMPORTANT ส่วนนี้ห้ามหาย -->
+<div class="container">
+<a href="historical.html" class="card">Historical Site in Bangkok</a>
+<a href="mall.html" class="card">Shopping Mall</a>
+<a href="park.html" class="card">Park</a>
+<a href="market.html" class="card">Market</a>
+<a href="restaurant.html" class="card">Restaurant</a>
+</div>
+
+<script>
+function openNav(){
+document.getElementById("mySidebar").style.width = "250px";
+}
+
+function closeNav(){
+document.getElementById("mySidebar").style.width = "0";
+}
+</script>
+
+</body>
+</html>
