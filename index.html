@@ -6,7 +6,7 @@ margin:0;
 font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
 color:#f5f5f5;
 text-align:center;
-background:#0e1a2b; /* deep navy luxury */
+background:#0e1a2b;
 }
 
 /* ===== MENU BUTTON ===== */
@@ -17,7 +17,7 @@ left:30px;
 font-size:26px;
 cursor:pointer;
 z-index:1000;
-color:#c6a75e; /* soft gold */
+color:#c6a75e;
 }
 
 /* ===== SIDEBAR ===== */
@@ -69,22 +69,24 @@ color:#c6a75e;
 text-transform:uppercase;
 }
 
-/* ===== CONTENT ===== */
+/* ===== CONTENT GRID ===== */
 .container{
+display:grid;
+grid-template-columns: repeat(2, 1fr);
+gap:30px;
+max-width:900px;
+margin:0 auto 80px auto;
 padding:20px;
 }
 
+/* ===== CARD ===== */
 .card{
 background:transparent;
-border:1px solid rgba(255,255,255,0.2);
+border:1px solid rgba(255,255,255,0.25);
 color:#f5f5f5;
-border-radius:0;
-padding:35px 20px;
-margin:25px auto;
-max-width:550px;
+padding:40px 20px;
 text-decoration:none;
-display:block;
-font-size:18px;
+font-size:16px;
 letter-spacing:2px;
 text-transform:uppercase;
 transition:0.4s;
@@ -93,24 +95,30 @@ transition:0.4s;
 .card:hover{
 background:#c6a75e;
 color:#0e1a2b;
-transform:translateY(-4px);
+transform:translateY(-5px);
 }
 
 /* ===== MOBILE ===== */
-@media (max-width: 600px) {
-  .header h1 {
-    font-size:28px;
-    letter-spacing:3px;
-  }
+@media (max-width: 768px) {
 
-  .header h2 {
-    font-size:12px;
-  }
+.container{
+grid-template-columns: 1fr;
+}
 
-  .card {
-    font-size:16px;
-    padding:25px 15px;
-  }
+.header h1{
+font-size:28px;
+letter-spacing:3px;
+}
+
+.header h2{
+font-size:12px;
+}
+
+.card{
+font-size:15px;
+padding:25px 15px;
+}
+
 }
 
 </style>
