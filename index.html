@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bangkok Travel Guide</title>
+
+<style>
+
+body{
+font-family: Arial;
+background:#0d47a1;
+text-align:center;
+margin:0;
+padding:0;
+}
+
+h1{
+color:white;
+padding-top:20px;
+}
+
+p{
+color:white;
+}
+
+/* ปุ่มเมนู */
+.menu-btn{
+font-size:28px;
+color:white;
+padding:15px;
+cursor:pointer;
+text-align:left;
+}
+
+/* เมนูด้านข้าง */
+.side-menu{
+height:100%;
+width:0;
+position:fixed;
+top:0;
+left:0;
+background:#002171;
+overflow-x:hidden;
+transition:0.3s;
+padding-top:60px;
+}
+
+.side-menu a{
+padding:12px 25px;
+text-decoration:none;
+font-size:18px;
+color:white;
+display:block;
+}
+
+.side-menu a:hover{
+background:#0d47a1;
+}
+
+.closebtn{
+position:absolute;
+top:10px;
+right:20px;
+font-size:30px;
+}
+
+/* การ์ด */
+.card-link{
+text-decoration:none;
+}
+
+.card{
+display:flex;
+align-items:center;
+background:#e0e0e0;
+width:90%;          /* ปรับให้พอดีมือถือ */
+max-width:600px;
+margin:20px auto;
+padding:15px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.03);
+background:#d5d5d5;
+cursor:pointer;
+}
+
+.icon{
+width:70px;
+margin-right:15px;
+}
+
+.text{
+text-align:left;
+}
+
+.text h2{
+margin:0;
+color:#0d47a1;
+}
+
+.text p{
+margin:5px 0 0 0;
+color:#333;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ปุ่มเปิดเมนู -->
+<div class="menu-btn" onclick="openMenu()">☰</div>
+
+<!-- เมนูด้านข้าง -->
+<div id="sideMenu" class="side-menu">
+<a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">×</a>
+<a href="index.html">Home</a>
+<a href="historical.html">Historical</a>
+<a href="mall.html">Mall</a>
+<a href="park.html">Park</a>
+<a href="market.html">Market</a>
+<a href="restaurant.html">Restaurant</a>
+</div>
+
+<h1>Bangkok Travel Guide</h1>
+<p>Select a category</p>
+
+<a href="historical.html" class="card-link">
+<div class="card">
+<img src="historical.png" class="icon">
+<div class="text">
+<h2>Historical Site in Bangkok</h2>
+<p>Click to go to Page 2</p>
+</div>
+</div>
+</a>
+
+<a href="mall.html" class="card-link">
+<div class="card">
+<img src="mall.png" class="icon">
+<div class="text">
+<h2>Shopping Mall</h2>
+<p>Click to go to Page 3</p>
+</div>
+</div>
+</a>
+
+<a href="park.html" class="card-link">
+<div class="card">
+<img src="park.png" class="icon">
+<div class="text">
+<h2>Park</h2>
+<p>Click to go to Page 4</p>
+</div>
+</div>
+</a>
+
+<a href="market.html" class="card-link">
+<div class="card">
+<img src="market.png" class="icon">
+<div class="text">
+<h2>Market</h2>
+<p>Click to go to Page 5</p>
+</div>
+</div>
+</a>
+
+<a href="restaurant.html" class="card-link">
+<div class="card">
+<img src="restaurant.png" class="icon">
+<div class="text">
+<h2>Restaurant</h2>
+<p>Click to go to Page 6</p>
+</div>
+</div>
+</a>
+
+<script>
+function openMenu(){
+document.getElementById("sideMenu").style.width="250px";
+}
+function closeMenu(){
+document.getElementById("sideMenu").style.width="0";
+}
+</script>
+
+</body>
+</html>
