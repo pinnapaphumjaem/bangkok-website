@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Park</title>
+<style>
+body{margin:0;font-family:Arial;background:#0b3d91;color:white;text-align:center;}
+.menu-btn{position:fixed;top:20px;left:20px;font-size:28px;cursor:pointer;z-index:1000;}
+.sidebar{height:100%;width:0;position:fixed;top:0;left:0;background:#062c6f;overflow-x:hidden;transition:0.3s;padding-top:60px;}
+.sidebar a{display:block;color:white;padding:15px;text-decoration:none;font-size:18px;}
+.sidebar a:hover{background:#0b3d91;}
+.content{padding:80px 20px;}
+img{max-width:90%;border-radius:10px;}
+button{padding:10px 20px;font-size:16px;border:none;border-radius:8px;cursor:pointer;background:white;color:#0b3d91;}
+button:hover{background:#e3f2fd;}
+</style>
 </head>
 
-<body style="font-family: Arial; text-align: center;">
+<body>
 
-<div class="navbar">
+<div class="menu-btn" onclick="openMenu()">☰</div>
+<div id="mySidebar" class="sidebar">
 <a href="index.html">Home</a>
 <a href="historical.html">Historical</a>
 <a href="mall.html">Mall</a>
@@ -15,19 +29,22 @@
 <a href="restaurant.html">Restaurant</a>
 </div>
 
-<h1>Historical Site in Bangkok</h1>
-
+<div class="content">
 <h1>Park in Bangkok</h1>
+<img src="park.png"><br><br>
+<p>Relax and enjoy green spaces, lakes, and outdoor activities in Bangkok’s parks.</p>
+<a href="index.html"><button>Back to Home</button></a>
+</div>
 
-<img src="park.png" width="400"><br><br>
-
-<p>
-Relax and enjoy nature in Bangkok’s beautiful parks.
-</p>
-
-<a href="index.html">
-<button>Back to Home</button>
-</a>
+<script>
+function openMenu(){document.getElementById("mySidebar").style.width="250px";}
+document.addEventListener("click",function(event){
+var sidebar=document.getElementById("mySidebar");
+var button=document.querySelector(".menu-btn");
+if(!sidebar.contains(event.target)&&event.target!==button){
+sidebar.style.width="0";}
+});
+</script>
 
 </body>
 </html>
