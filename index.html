@@ -1,81 +1,47 @@
-<div class="header">
-<h1>THE CONCIERGE</h1>
-<p>Hilton Bangkok Grande Asoke</p>
-</div>
-
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<style>
+body{
+  margin:0;
+  font-family:sans-serif;
+  background:#0b1d3a;
+  color:white;
+}
 .header{
-padding:120px 20px 40px;
-text-align:center;
+  text-align:center;
+  padding:60px 20px 20px;
 }
-
-.header p{
-font-size:12px;
-color:#c6a75e;
-letter-spacing:2px;
+.container{
+  padding:20px;
 }
-
-<style>
-.header{ padding:120px 20px 40px; text-align:center; }
-.header p{ font-size:12px; color:#c6a75e; letter-spacing:2px; }
-body{ margin:0; overflow-x:hidden; }
-.container{ padding-top:100px; }
-</style>
-<style>
-body{margin:0;font-family:'Segoe UI';background:#0b1d3a;color:white;}
-..topbar{
-position:fixed;
-top:0;
-width:100%;
-height:60px;
+.card{
+  background:#12294d;
+  padding:18px;
+  margin:10px 0;
+  border-radius:12px;
+  text-decoration:none;
+  display:block;
+  color:white;
 }
-.menu-btn{font-size:20px;cursor:pointer;margin-right:15px;}
-.side-menu{position:fixed;top:0;left:-250px;width:250px;height:100%;background:#0b1d3a;padding-top:60px;transition:.3s;}
-.side-menu a{display:block;color:white;padding:15px;text-decoration:none;}
-.container{padding:80px 15px;max-width:500px;margin:auto;}
-.card{background:#12294d;margin-bottom:20px;padding:20px;border-radius:10px;cursor:pointer;}
 </style>
 </head>
 
 <body>
-body{
-margin:0;
-overflow-x:hidden;
-}
 
-.container{
-padding-top:100px;
-}
-
-<div class="topbar">
-<span class="menu-btn" onclick="toggleMenu()">☰</span>
-<h1>HOME</h1>
-</div>
-
-<div id="menu" class="side-menu">
-<a href="index.html">Home</a>
-<a href="historical.html">Historical</a>
-<a href="mall.html">Mall</a>
-<a href="park.html">Park</a>
-<a href="market.html">Market</a>
-<a href="restaurant.html">Restaurant</a>
+<div class="header">
+  <h1>THE CONCIERGE</h1>
 </div>
 
 <div class="container">
-
-<div class="card" onclick="location.href='historical.html'">📍 Historical</div>
-<div class="card" onclick="location.href='mall.html'">🛍 Mall</div>
-<div class="card" onclick="location.href='park.html'">🌳 Park</div>
-<div class="card" onclick="location.href='market.html'">🛒 Market</div>
-<div class="card" onclick="location.href='restaurant.html'">🍽 Restaurant</div>
-
+  <a href="historical.html" class="card">📍 Historical</a>
+  <a href="mall.html" class="card">🛍 Mall</a>
+  <a href="park.html" class="card">🌳 Park</a>
+  <a href="market.html" class="card">🛒 Market</a>
+  <a href="restaurant.html" class="card">🍽 Restaurant</a>
 </div>
-
-<script>
-function toggleMenu(){
-let menu=document.getElementById("menu");
-menu.style.left=menu.style.left==="0px"?"-250px":"0px";
-}
-</script>
 
 </body>
 </html>
