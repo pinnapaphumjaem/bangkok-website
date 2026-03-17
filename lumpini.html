@@ -1,12 +1,25 @@
 <!DOCTYPE html>
-<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>body{margin:0;background:#0b1d3a;color:white;font-family:sans-serif}.topbar{padding:15px}.content{padding:20px}</style>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumphini Park</title>
+<style>
+body{margin:0;background:#0b1d3a;color:white;font-family:sans-serif;}
+.topbar{display:flex;align-items:center;padding:15px;}
+.content{padding:20px;}
+img{width:100%;border-radius:15px;margin-bottom:15px;}
+button{width:100%;padding:12px;border:none;border-radius:10px;background:#1e90ff;color:white;}
+</style>
+<script>
+function openMap(){window.open("https://www.google.com/maps?q=Lumphini+Park","_blank");}
+</script>
 </head>
 <body>
-<div class="topbar"><button onclick="history.back()">←</button> Lumpini Park</div>
+<div class="topbar"><button onclick="history.back()">←</button><h2>Lumphini Park</h2></div>
 <div class="content">
-<p>Highlight: Large park for jogging</p>
-<p>Time: 04:30 AM – 10:00 PM</p>
-<p>Transport: BTS Sala Daeng</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Lumphini_Park.jpg">
+<p>Large park for relaxing</p>
+<button onclick="openMap()">📍 Google Maps</button>
 </div>
-</body></html>
+</body>
+</html>
