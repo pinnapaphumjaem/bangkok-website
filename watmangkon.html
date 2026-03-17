@@ -7,17 +7,20 @@
 body{margin:0;background:#0b1d3a;color:white;font-family:sans-serif;}
 .topbar{display:flex;align-items:center;padding:15px;}
 .content{padding:20px;}
+img{width:100%;border-radius:15px;margin-bottom:15px;}
+button{width:100%;padding:12px;border:none;border-radius:10px;background:#1e90ff;color:white;}
 </style>
+<script>
+function openMap(){window.open("https://www.google.com/maps?q=Wat+Mangkon","_blank");}
+</script>
 </head>
 <body>
-<div class="topbar">
-<button onclick="history.back()">←</button>
-<h2 style="margin-left:10px;">Wat Mangkon</h2>
-</div>
+<div class="topbar"><button onclick="history.back()">←</button><h2 style="margin-left:10px;">Wat Mangkon</h2></div>
 <div class="content">
-<p><b>Highlight:</b> Important Chinese temple in Chinatown</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Wat_Mangkon.jpg">
+<p><b>Highlight:</b> Chinese temple</p>
 <p><b>Time:</b> 06:00 AM – 06:00 PM</p>
-<p><b>Transport:</b> MRT Wat Mangkon</p>
+<button onclick="openMap()">📍 Google Maps</button>
 </div>
 </body>
 </html>
