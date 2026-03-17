@@ -2,13 +2,11 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historical</title>
 <style>
 body{margin:0;background:#0b1d3a;color:white;font-family:sans-serif;}
-.topbar{position:fixed;top:0;width:100%;height:60px;background:#0b1d3a;display:flex;align-items:center;padding:0 15px;}
-.container{padding:80px 15px;}
-.card{background:#12294d;padding:15px;margin-bottom:10px;border-radius:10px;cursor:pointer;}
-.modal{display:none;position:fixed;width:100%;height:100%;background:rgba(0,0,0,0.85);justify-content:center;align-items:center;}
-.modal-content{background:#12294d;padding:20px;border-radius:10px;width:90%;max-height:80%;overflow:auto;}
+.topbar{display:flex;align-items:center;padding:15px;}
+.card{background:#12294d;padding:15px;margin:10px;border-radius:10px;text-decoration:none;color:white;display:block;}
 </style>
 </head>
 
@@ -19,66 +17,11 @@ body{margin:0;background:#0b1d3a;color:white;font-family:sans-serif;}
 <h2 style="margin-left:10px;">Historical</h2>
 </div>
 
-<div class="container">
-<div class="card" onclick="show('grand')">Grand Palace</div>
-<div class="card" onclick="show('kaew')">Wat Phra Kaew</div>
-<div class="card" onclick="show('arun')">Wat Arun</div>
-<div class="card" onclick="show('pho')">Wat Pho</div>
-<div class="card" onclick="show('mangkon')">Wat Mangkon</div>
-</div>
-
-<div id="modal" class="modal" onclick="hide()">
-<div class="modal-content" id="data"></div>
-</div>
-
-<script>
-function show(p){
-let d="";
-
-if(p==="grand"){
-d=`📍 Grand Palace<br><br>
-Highlight: Thailand’s most iconic landmark showcasing royal history and magnificent architecture<br><br>
-Time: 08:30 AM – 03:30 PM<br><br>
-Transport:<br>
-• MRT Sanam Chai + 10-minute walk (800 m)<br>
-• Chao Phraya River boat (Tha Chang Pier 300 m)`;}
-
-if(p==="kaew"){
-d=`📍 Wat Phra Kaew<br><br>
-Highlight: The most sacred temple in Thailand<br><br>
-Time: 08:30 AM – 03:30 PM<br><br>
-Transport:<br>
-• MRT Sanam Chai + walk`;}
-
-if(p==="arun"){
-d=`📍 Wat Arun<br><br>
-Highlight: Riverside temple, beautiful at sunset<br><br>
-Time: 08:00 AM – 06:00 PM<br><br>
-Transport:<br>
-• Ferry from Tha Tien`;}
-
-if(p==="pho"){
-d=`📍 Wat Pho<br><br>
-Highlight: Reclining Buddha / Thai massage origin<br><br>
-Time: 08:00 AM – 06:30 PM<br><br>
-Transport:<br>
-• MRT Sanam Chai`;}
-
-if(p==="mangkon"){
-d=`📍 Wat Mangkon Kamalawat<br><br>
-Highlight: Chinese temple in Chinatown<br><br>
-Time: 06:00 AM – 06:00 PM<br><br>
-Transport:<br>
-• MRT Wat Mangkon`;}
-
-document.getElementById("data").innerHTML=d;
-document.getElementById("modal").style.display="flex";
-}
-
-function hide(){
-document.getElementById("modal").style.display="none";
-}
-</script>
+<a href="grandpalace.html" class="card">Grand Palace</a>
+<a href="watphra.html" class="card">Wat Phra Kaew</a>
+<a href="watarun.html" class="card">Wat Arun</a>
+<a href="watpho.html" class="card">Wat Pho</a>
+<a href="watmangkon.html" class="card">Wat Mangkon</a>
 
 </body>
 </html>
