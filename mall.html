@@ -2,51 +2,26 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mall</title>
 <style>
-body{margin:0;font-family:sans-serif;background:#0b1d3a;color:white;}
-.topbar{position:fixed;top:0;width:100%;height:60px;background:#0b1d3a;display:flex;align-items:center;padding:0 15px;}
-.container{padding:80px 15px;}
-.card{background:#12294d;padding:15px;margin-bottom:10px;border-radius:10px;cursor:pointer;}
-.modal{display:none;position:fixed;width:100%;height:100%;background:rgba(0,0,0,0.8);justify-content:center;align-items:center;}
-.modal-content{background:#12294d;padding:20px;border-radius:10px;width:90%;}
+body{margin:0;background:#0b1d3a;color:white;font-family:sans-serif;}
+.topbar{display:flex;align-items:center;padding:15px;}
+.card{background:#12294d;padding:15px;margin:10px;border-radius:10px;text-decoration:none;color:white;display:block;}
 </style>
 </head>
 <body>
+
 <div class="topbar">
 <button onclick="history.back()" style="background:none;border:none;color:white;font-size:20px;">←</button>
-<h2 style="margin-left:10px;">Historical</h2>
+<h2 style="margin-left:10px;">Mall</h2>
 </div>
 
-<div class="topbar"><h2>Mall</h2></div>
-
-<div class="container">
-<div class="card" onclick="show('siam')">Siam Paragon</div>
-<div class="card" onclick="show('iconsiam')">ICONSIAM</div>
-<div class="card" onclick="show('central')">CentralWorld</div>
-<div class="card" onclick="show('mbk')">MBK</div>
-<div class="card" onclick="show('rama9')">Rama 9</div>
-<div class="card" onclick="show('terminal')">Terminal 21</div>
-</div>
-
-<div id="modal" class="modal" onclick="hide()">
-<div class="modal-content" id="data"></div>
-</div>
-
-<script>
-function show(p){
-let d="";
-if(p==="siam"){d=`📍 Siam Paragon<br>Luxury mall<br>10:00–22:00<br>BTS Siam`;}
-if(p==="iconsiam"){d=`📍 ICONSIAM<br>Riverside mall<br>10:00–22:00`;}
-if(p==="central"){d=`📍 CentralWorld<br>Large mall<br>10:00–22:00`;}
-if(p==="mbk"){d=`📍 MBK<br>Budget shopping<br>10:00–22:00`;}
-if(p==="rama9"){d=`📍 Rama 9<br>Business mall`;}
-if(p==="terminal"){d=`📍 Terminal 21<br>Airport theme mall`;}
-
-document.getElementById("data").innerHTML=d;
-document.getElementById("modal").style.display="flex";
-}
-function hide(){document.getElementById("modal").style.display="none";}
-</script>
+<a href="paragon.html" class="card">Siam Paragon</a>
+<a href="iconsiam.html" class="card">ICONSIAM</a>
+<a href="centralworld.html" class="card">CentralWorld</a>
+<a href="mbk.html" class="card">MBK</a>
+<a href="rama9.html" class="card">Central Rama 9</a>
+<a href="terminal21.html" class="card">Terminal 21</a>
 
 </body>
 </html>
