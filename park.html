@@ -1,110 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Bangkok Guide</title>
-
+<title>Park</title>
 <style>
-
-/* ===== BODY ===== */
-body{
-margin:0;
-font-family: 'Segoe UI', sans-serif;
-background:#0b1d3a;
-color:white;
-}
-
-/* ===== TOP BAR ===== */
-.topbar{
-position:fixed;
-top:0;
-width:100%;
-background:#0b1d3a;
-display:flex;
-align-items:center;
-padding:15px;
-z-index:1000;
-border-bottom:1px solid rgba(255,255,255,0.1);
-}
-
-.menu-btn{
-font-size:20px;
-cursor:pointer;
-margin-right:15px;
-}
-
-.topbar h1{
-font-size:16px;
-margin:0;
-letter-spacing:2px;
-}
-
-/* ===== SIDE MENU ===== */
-.side-menu{
-position:fixed;
-top:0;
-left:-250px;
-width:250px;
-height:100%;
-background:#0b1d3a;
-padding-top:60px;
-transition:0.3s;
-z-index:999;
-}
-
-.side-menu a{
-display:block;
-color:white;
-padding:15px;
-text-decoration:none;
-border-bottom:1px solid rgba(255,255,255,0.1);
-}
-
-/* ===== CONTENT ===== */
-.container{
-padding:80px 15px 30px;
-max-width:500px;
-margin:auto;
-}
-
-/* ===== CARD ===== */
-.card{
-background:#12294d;
-margin-bottom:20px;
-padding:20px;
-border-radius:10px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-background:#1c3d6e;
-}
-
-.card h3{
-margin:0 0 10px;
-}
-
-.card p{
-margin:0;
-font-size:14px;
-color:#ccc;
-}
-
+body{margin:0;font-family:'Segoe UI';background:#0b1d3a;color:white;}
+.topbar{position:fixed;top:0;width:100%;background:#0b1d3a;display:flex;padding:15px;}
+.menu-btn{cursor:pointer;margin-right:15px;}
+.side-menu{position:fixed;left:-250px;width:250px;height:100%;background:#0b1d3a;padding-top:60px;transition:.3s;}
+.side-menu a{display:block;color:white;padding:15px;text-decoration:none;}
+.container{padding:80px 15px;}
+.card{background:#12294d;margin-bottom:20px;padding:20px;border-radius:10px;}
 </style>
 </head>
 
 <body>
 
-<!-- TOP -->
-<div class="topbar">
-<span class="menu-btn" onclick="toggleMenu()">☰</span>
-<h1>PAGE TITLE</h1>
-</div>
+<div class="topbar"><span class="menu-btn" onclick="toggleMenu()">☰</span><h1>PARK</h1></div>
 
-<!-- MENU -->
 <div id="menu" class="side-menu">
 <a href="index.html">Home</a>
 <a href="historical.html">Historical</a>
@@ -114,43 +27,18 @@ color:#ccc;
 <a href="restaurant.html">Restaurant</a>
 </div>
 
-<!-- CONTENT -->
-<div class="card">
-<h3>Chatuchak Park</h3>
-<p>Green space near the famous market</p>
-</div>
-
-<div class="card">
-<h3>Wachirabenchathat Park (Suan Rot Fai)</h3>
-<p>Large park for biking and relaxing</p>
-</div>
-
-<div class="card">
-<h3>Benchasiri Park</h3>
-<p>Small park in Sukhumvit area</p>
-</div>
-
-<div class="card">
-<h3>Santiphap Park</h3>
-<p>Peaceful park near Victory Monument</p>
-</div>
-
-<div class="card">
-<h3>Lumpini Park</h3>
-<p>Relax in the heart of the city</p>
-</div>
-
-<div class="card">
-<h3>Benjakitti Park</h3>
-<p>Modern park with skyline view</p>
-</div>
-
+<div class="container">
+<div class="card">Lumphini Park</div>
+<div class="card">Benjakitti Park</div>
+<div class="card">Chatuchak Park</div>
+<div class="card">Wachirabenchathat Park</div>
+<div class="card">Benchasiri Park</div>
 </div>
 
 <script>
 function toggleMenu(){
-let menu = document.getElementById("menu");
-menu.style.left = menu.style.left === "0px" ? "-250px" : "0px";
+let menu=document.getElementById("menu");
+menu.style.left=menu.style.left==="0px"?"-250px":"0px";
 }
 </script>
 
