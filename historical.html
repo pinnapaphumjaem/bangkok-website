@@ -1,7 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historical</title>
+
+<style>
+body{margin:0;font-family:'Segoe UI';background:linear-gradient(135deg,#1e4ed8,#0b3d91);color:white;}
+.topbar{position:fixed;top:0;width:100%;background:rgba(0,0,0,0.3);display:flex;align-items:center;padding:12px;}
+.topbar h1{flex:1;text-align:center;font-size:16px;margin:0;}
+.container{padding:70px 15px 90px;}
+.card{background:white;color:#0b3d91;border-radius:15px;padding:15px;margin-bottom:15px;}
+.highlight{background:#ffd700;padding:4px 8px;border-radius:6px;font-size:12px;display:inline-block;margin-bottom:8px;}
+.bottom-nav{position:fixed;bottom:0;width:100%;background:#0b3d91;display:flex;justify-content:space-around;padding:10px 0;}
+.bottom-nav a{color:white;text-decoration:none;font-size:12px;}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+<button onclick="history.back()">←</button>
 <h1>HISTORICAL</h1>
+</div>
+
+<div class="container">
 
 <div class="card">
 <div class="highlight">⭐ Landmark</div>
 <h3>Grand Palace</h3>
-<p>Famous royal palace in Bangkok</p>
+<p>Thailand’s most iconic royal landmark</p>
 </div>
+
+<div class="card">
+<div class="highlight">⭐ Temple</div>
+<h3>Wat Phra Kaew</h3>
+<p>Most sacred temple in Thailand</p>
+</div>
+
+<div class="card">
+<div class="highlight">⭐ Sunset</div>
+<h3>Wat Arun</h3>
+<p>Beautiful riverside temple</p>
+</div>
+
+</div>
+
+<div class="bottom-nav">
+<a href="index.html">Home</a>
+<a href="historical.html">History</a>
+<a href="mall.html">Mall</a>
+<a href="market.html">Market</a>
+<a href="restaurant.html">Food</a>
+</div>
+
+</body>
+</html>
