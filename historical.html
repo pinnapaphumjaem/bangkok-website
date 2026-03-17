@@ -2,142 +2,48 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Historical</title>
-
 <style>
-body{
-margin:0;
-font-family:sans-serif;
-background:#0b1d3a;
-color:white;
-}
-
-.topbar{
-position:fixed;
-top:0;
-width:100%;
-height:60px;
-background:#0b1d3a;
-display:flex;
-align-items:center;
-padding:0 15px;
-z-index:1000;
-}
-
-.container{
-padding:80px 15px;
-}
-
-.card{
-background:#12294d;
-padding:20px;
-margin-bottom:15px;
-border-radius:10px;
-cursor:pointer;
-}
-
-/* POPUP */
-.modal{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.8);
-justify-content:center;
-align-items:center;
-}
-
-.modal-content{
-background:#12294d;
-padding:20px;
-border-radius:10px;
-width:90%;
-max-width:400px;
-}
-
-.close{
-color:#c6a75e;
-cursor:pointer;
-margin-bottom:10px;
-display:block;
-}
+body{margin:0;font-family:sans-serif;background:#0b1d3a;color:white;}
+.topbar{position:fixed;top:0;width:100%;height:60px;background:#0b1d3a;display:flex;align-items:center;padding:0 15px;}
+.container{padding:80px 15px;}
+.card{background:#12294d;padding:15px;margin-bottom:10px;border-radius:10px;cursor:pointer;}
+.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);justify-content:center;align-items:center;}
+.modal-content{background:#12294d;padding:20px;border-radius:10px;width:90%;max-width:400px;}
+.close{cursor:pointer;color:#c6a75e;margin-bottom:10px;display:block;}
 </style>
 </head>
-
 <body>
 
-<div class="topbar">
-<h2>Historical</h2>
-</div>
+<div class="topbar"><h2>Historical</h2></div>
 
 <div class="container">
-
-<div class="card" onclick="openModal('grand')">Grand Palace</div>
-<div class="card" onclick="openModal('kaew')">Wat Phra Kaew</div>
-<div class="card" onclick="openModal('arun')">Wat Arun</div>
-<div class="card" onclick="openModal('pho')">Wat Pho</div>
-<div class="card" onclick="openModal('mangkon')">Wat Mangkon</div>
-
+<div class="card" onclick="show('grand')">Grand Palace</div>
+<div class="card" onclick="show('kaew')">Wat Phra Kaew</div>
+<div class="card" onclick="show('arun')">Wat Arun</div>
+<div class="card" onclick="show('pho')">Wat Pho</div>
+<div class="card" onclick="show('mangkon')">Wat Mangkon</div>
 </div>
 
-<!-- POPUP -->
 <div id="modal" class="modal">
 <div class="modal-content">
-<span class="close" onclick="closeModal()">← Back</span>
-<div id="content"></div>
+<span class="close" onclick="hide()">← Back</span>
+<div id="data"></div>
 </div>
 </div>
 
 <script>
-function openModal(place){
-let text = "";
+function show(p){
+let d="";
+if(p==="grand"){d=`<h2>📍 Grand Palace</h2><p>Highlight: Thailand’s most iconic landmark</p><p>Time: 08:30–15:30</p><p>Transport: MRT Sanam Chai</p>`;}
+if(p==="kaew"){d=`<h2>📍 Wat Phra Kaew</h2><p>Highlight: Sacred temple</p><p>Time: 08:30–15:30</p><p>Transport: MRT Sanam Chai</p>`;}
+if(p==="arun"){d=`<h2>📍 Wat Arun</h2><p>Highlight: Riverside temple</p><p>Time: 08:00–18:00</p><p>Transport: Ferry</p>`;}
+if(p==="pho"){d=`<h2>📍 Wat Pho</h2><p>Highlight: Reclining Buddha</p><p>Time: 08:00–18:30</p><p>Transport: MRT Sanam Chai</p>`;}
+if(p==="mangkon"){d=`<h2>📍 Wat Mangkon</h2><p>Highlight: Chinese temple</p><p>Time: 06:00–18:00</p><p>Transport: MRT Wat Mangkon</p>`;}
 
-if(place==="grand"){
-text = `<h2>📍 Grand Palace</h2>
-<p>Highlight: Thailand’s most iconic landmark showcasing royal history and magnificent architecture</p>
-<p>Time: 08:30 AM – 03:30 PM</p>
-<p>Transport:<br>
-• MRT Sanam Chai + 10-minute walk (800 m)<br>
-• Boat Tha Chang Pier (300 m)</p>`;
+document.getElementById("data").innerHTML=d;
+document.getElementById("modal").style.display="flex";
 }
-
-if(place==="kaew"){
-text = `<h2>📍 Wat Phra Kaew</h2>
-<p>Highlight: The most sacred temple in Thailand</p>
-<p>Time: 08:30 AM – 03:30 PM</p>
-<p>Transport: MRT Sanam Chai</p>`;
-}
-
-if(place==="arun"){
-text = `<h2>📍 Wat Arun</h2>
-<p>Highlight: Beautiful riverside temple at sunset</p>
-<p>Time: 08:00 AM – 06:00 PM</p>
-<p>Transport: Ferry from Tha Tien</p>`;
-}
-
-if(place==="pho"){
-text = `<h2>📍 Wat Pho</h2>
-<p>Highlight: Reclining Buddha & Thai knowledge</p>
-<p>Time: 08:00 AM – 06:30 PM</p>
-<p>Transport: MRT Sanam Chai</p>`;
-}
-
-if(place==="mangkon"){
-text = `<h2>📍 Wat Mangkon</h2>
-<p>Highlight: Main Chinese temple in Chinatown</p>
-<p>Time: 06:00 AM – 06:00 PM</p>
-<p>Transport: MRT Wat Mangkon</p>`;
-}
-
-document.getElementById("content").innerHTML = text;
-document.getElementById("modal").style.display = "flex";
-}
-
-function closeModal(){
-document.getElementById("modal").style.display = "none";
-}
+function hide(){document.getElementById("modal").style.display="none";}
 </script>
 
 </body>
