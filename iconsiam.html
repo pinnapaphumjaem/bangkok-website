@@ -7,14 +7,19 @@
 body{margin:0;background:#0b1d3a;color:white;font-family:sans-serif;}
 .topbar{display:flex;align-items:center;padding:15px;}
 .content{padding:20px;}
+img{width:100%;border-radius:15px;margin-bottom:15px;}
+button{width:100%;padding:12px;border:none;border-radius:10px;background:#1e90ff;color:white;}
 </style>
+<script>
+function openMap(){window.open("https://www.google.com/maps?q=ICONSIAM","_blank");}
+</script>
 </head>
 <body>
-<div class="topbar"><button onclick="history.back()">←</button><h2 style="margin-left:10px;">ICONSIAM</h2></div>
+<div class="topbar"><button onclick="history.back()">←</button><h2>ICONSIAM</h2></div>
 <div class="content">
-<p><b>Highlight:</b> Riverside luxury mall</p>
-<p><b>Time:</b> 10:00 AM – 10:00 PM</p>
-<p><b>Transport:</b> BTS Charoen Nakhon</p>
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/ICONSIAM.jpg">
+<p>Luxury riverside mall</p>
+<button onclick="openMap()">📍 Google Maps</button>
 </div>
 </body>
 </html>
