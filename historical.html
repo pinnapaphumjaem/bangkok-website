@@ -1,48 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Historical</title>
 
 <style>
-body{margin:0;font-family:'Segoe UI';background:#0b1d3a;color:white;}
-.topbar{position:fixed;top:0;width:100%;background:#0b1d3a;display:flex;padding:15px;}
-.menu-btn{font-size:20px;cursor:pointer;margin-right:15px;}
-.side-menu{position:fixed;top:0;left:-250px;width:250px;height:100%;background:#0b1d3a;padding-top:60px;transition:.3s;}
-.side-menu a{display:block;color:white;padding:15px;text-decoration:none;}
-.container{padding:80px 15px;max-width:500px;margin:auto;}
-.card{background:#12294d;margin-bottom:20px;padding:20px;border-radius:10px;}
+body{
+margin:0;
+font-family:sans-serif;
+background:#0b1d3a;
+color:white;
+}
+
+.topbar{
+position:fixed;
+top:0;
+width:100%;
+height:60px;
+background:#0b1d3a;
+display:flex;
+align-items:center;
+padding:0 15px;
+z-index:1000;
+}
+
+.container{
+padding:80px 15px;
+}
+
+.card{
+background:#12294d;
+padding:20px;
+margin-bottom:15px;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* POPUP */
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+}
+
+.modal-content{
+background:#12294d;
+padding:20px;
+border-radius:10px;
+width:90%;
+max-width:400px;
+}
+
+.close{
+color:#c6a75e;
+cursor:pointer;
+margin-bottom:10px;
+display:block;
+}
 </style>
 </head>
 
 <body>
 
-<div class="topbar"><span class="menu-btn" onclick="toggleMenu()">☰</span><h1>HISTORICAL</h1></div>
-
-<div id="menu" class="side-menu">
-<a href="index.html">Home</a>
-<a href="historical.html">Historical</a>
-<a href="mall.html">Mall</a>
-<a href="park.html">Park</a>
-<a href="market.html">Market</a>
-<a href="restaurant.html">Restaurant</a>
+<div class="topbar">
+<h2>Historical</h2>
 </div>
 
 <div class="container">
 
-<div class="card"><h3>Grand Palace</h3><p>Iconic landmark</p></div>
-<div class="card"><h3>Wat Phra Kaew</h3><p>Most sacred temple</p></div>
-<div class="card"><h3>Wat Arun</h3><p>Riverside temple</p></div>
-<div class="card"><h3>Wat Pho</h3><p>Reclining Buddha</p></div>
-<div class="card"><h3>Wat Mangkon</h3><p>Chinese temple</p></div>
+<div class="card" onclick="openModal('grand')">Grand Palace</div>
+<div class="card" onclick="openModal('kaew')">Wat Phra Kaew</div>
+<div class="card" onclick="openModal('arun')">Wat Arun</div>
+<div class="card" onclick="openModal('pho')">Wat Pho</div>
+<div class="card" onclick="openModal('mangkon')">Wat Mangkon</div>
 
 </div>
 
+<!-- POPUP -->
+<div id="modal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal()">← Back</span>
+<div id="content"></div>
+</div>
+</div>
+
 <script>
-function toggleMenu(){
-let menu=document.getElementById("menu");
-menu.style.left=menu.style.left==="0px"?"-250px":"0px";
+function openModal(place){
+let text = "";
+
+if(place==="grand"){
+text = `<h2>📍 Grand Palace</h2>
+<p>Highlight: Thailand’s most iconic landmark showcasing royal history and magnificent architecture</p>
+<p>Time: 08:30 AM – 03:30 PM</p>
+<p>Transport:<br>
+• MRT Sanam Chai + 10-minute walk (800 m)<br>
+• Boat Tha Chang Pier (300 m)</p>`;
+}
+
+if(place==="kaew"){
+text = `<h2>📍 Wat Phra Kaew</h2>
+<p>Highlight: The most sacred temple in Thailand</p>
+<p>Time: 08:30 AM – 03:30 PM</p>
+<p>Transport: MRT Sanam Chai</p>`;
+}
+
+if(place==="arun"){
+text = `<h2>📍 Wat Arun</h2>
+<p>Highlight: Beautiful riverside temple at sunset</p>
+<p>Time: 08:00 AM – 06:00 PM</p>
+<p>Transport: Ferry from Tha Tien</p>`;
+}
+
+if(place==="pho"){
+text = `<h2>📍 Wat Pho</h2>
+<p>Highlight: Reclining Buddha & Thai knowledge</p>
+<p>Time: 08:00 AM – 06:30 PM</p>
+<p>Transport: MRT Sanam Chai</p>`;
+}
+
+if(place==="mangkon"){
+text = `<h2>📍 Wat Mangkon</h2>
+<p>Highlight: Main Chinese temple in Chinatown</p>
+<p>Time: 06:00 AM – 06:00 PM</p>
+<p>Transport: MRT Wat Mangkon</p>`;
+}
+
+document.getElementById("content").innerHTML = text;
+document.getElementById("modal").style.display = "flex";
+}
+
+function closeModal(){
+document.getElementById("modal").style.display = "none";
 }
 </script>
 
