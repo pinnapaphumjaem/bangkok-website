@@ -2,49 +2,25 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Park</title>
 <style>
 body{margin:0;background:#0b1d3a;color:white;font-family:sans-serif;}
-.topbar{position:fixed;top:0;width:100%;height:60px;background:#0b1d3a;display:flex;align-items:center;padding:0 15px;}
-.container{padding:80px 15px;}
-.card{background:#12294d;padding:15px;margin-bottom:10px;border-radius:10px;cursor:pointer;}
-.modal{display:none;position:fixed;width:100%;height:100%;background:rgba(0,0,0,0.8);justify-content:center;align-items:center;}
-.modal-content{background:#12294d;padding:20px;border-radius:10px;width:90%;}
+.topbar{display:flex;align-items:center;padding:15px;}
+.card{background:#12294d;padding:15px;margin:10px;border-radius:10px;text-decoration:none;color:white;display:block;}
 </style>
 </head>
 <body>
+
 <div class="topbar">
-<button onclick="history.back()" style="background:none;border:none;color:white;font-size:20px;">←</button>
-<h2 style="margin-left:10px;">Historical</h2>
+<button onclick="history.back()">←</button>
+<h2 style="margin-left:10px;">Park</h2>
 </div>
 
-<div class="topbar"><h2>Park</h2></div>
-
-<div class="container">
-<div class="card" onclick="show('lumpini')">Lumphini Park</div>
-<div class="card" onclick="show('benjakitti')">Benjakitti Park</div>
-<div class="card" onclick="show('chatuchak')">Chatuchak Park</div>
-<div class="card" onclick="show('wachira')">Wachirabenchathat Park</div>
-<div class="card" onclick="show('benchasiri')">Benchasiri Park</div>
-</div>
-
-<div id="modal" class="modal" onclick="hide()">
-<div class="modal-content" id="data"></div>
-</div>
-
-<script>
-function show(p){
-let d="";
-if(p==="lumpini"){d=`📍 Lumphini Park<br>04:30–22:00<br>BTS Sala Daeng`;}
-if(p==="benjakitti"){d=`📍 Benjakitti Park<br>05:00–21:00<br>MRT Queen Sirikit`;}
-if(p==="chatuchak"){d=`📍 Chatuchak Park<br>04:30–22:00`;}
-if(p==="wachira"){d=`📍 Wachirabenchathat Park<br>05:00–21:00`;}
-if(p==="benchasiri"){d=`📍 Benchasiri Park<br>05:00–21:00`;}
-
-document.getElementById("data").innerHTML=d;
-document.getElementById("modal").style.display="flex";
-}
-function hide(){document.getElementById("modal").style.display="none";}
-</script>
+<a href="lumpini.html" class="card">Lumpini Park</a>
+<a href="benjakitti.html" class="card">Benjakitti Park</a>
+<a href="chatuchakpark.html" class="card">Chatuchak Park</a>
+<a href="rotfai.html" class="card">Wachirabenchathat Park</a>
+<a href="benchasiri.html" class="card">Benchasiri Park</a>
 
 </body>
 </html>
