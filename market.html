@@ -2,49 +2,26 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Market</title>
 <style>
 body{margin:0;background:#0b1d3a;color:white;font-family:sans-serif;}
-.topbar{position:fixed;top:0;width:100%;height:60px;background:#0b1d3a;display:flex;align-items:center;padding:0 15px;}
-.container{padding:80px 15px;}
-.card{background:#12294d;padding:15px;margin-bottom:10px;border-radius:10px;cursor:pointer;}
-.modal{display:none;position:fixed;width:100%;height:100%;background:rgba(0,0,0,0.8);justify-content:center;align-items:center;}
-.modal-content{background:#12294d;padding:20px;border-radius:10px;width:90%;}
+.topbar{display:flex;align-items:center;padding:15px;}
+.card{background:#12294d;padding:15px;margin:10px;border-radius:10px;text-decoration:none;color:white;display:block;}
 </style>
 </head>
 <body>
+
 <div class="topbar">
-<button onclick="history.back()" style="background:none;border:none;color:white;font-size:20px;">←</button>
-<h2 style="margin-left:10px;">Historical</h2>
+<button onclick="history.back()">←</button>
+<h2 style="margin-left:10px;">Market</h2>
 </div>
 
-<div class="topbar"><h2>Market</h2></div>
-
-<div class="container">
-<div class="card" onclick="show('jodd')">JODD FAIRS</div>
-<div class="card" onclick="show('china')">Chinatown</div>
-<div class="card" onclick="show('asiatique')">Asiatique</div>
-<div class="card" onclick="show('train')">Train Night</div>
-<div class="card" onclick="show('khaosan')">Khao San</div>
-</div>
-
-<div id="modal" class="modal" onclick="hide()">
-<div class="modal-content" id="data"></div>
-</div>
-
-<script>
-function show(p){
-let d="";
-if(p==="jodd"){d=`📍 JODD FAIRS<br>17:00–00:00<br>MRT Cultural Centre`;}
-if(p==="china"){d=`📍 Chinatown<br>16:00–02:00<br>MRT Wat Mangkon`;}
-if(p==="asiatique"){d=`📍 Asiatique<br>17:00–00:00`;}
-if(p==="train"){d=`📍 Train Night Market<br>17:00–01:00`;}
-if(p==="khaosan"){d=`📍 Khao San Road<br>18:00–02:00`;}
-
-document.getElementById("data").innerHTML=d;
-document.getElementById("modal").style.display="flex";
-}
-function hide(){document.getElementById("modal").style.display="none";}
-</script>
+<a href="jodd.html" class="card">JODD FAIRS</a>
+<a href="yaowarat.html" class="card">Chinatown</a>
+<a href="asiatique.html" class="card">Asiatique</a>
+<a href="trainmarket.html" class="card">Train Night Market</a>
+<a href="khaosan.html" class="card">Khao San</a>
+<a href="chatuchakmarket.html" class="card">Chatuchak Market</a>
 
 </body>
 </html>
