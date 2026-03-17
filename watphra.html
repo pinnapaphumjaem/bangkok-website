@@ -2,57 +2,24 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wat Phra Kaew</title>
-
+<title>Terminal 21</title>
 <style>
 body{margin:0;background:#0b1d3a;color:white;font-family:sans-serif;}
 .topbar{display:flex;align-items:center;padding:15px;}
 .content{padding:20px;}
-
-img{
-width:100%;
-border-radius:15px;
-margin-bottom:15px;
-}
-
-button.map{
-margin-top:15px;
-padding:12px;
-width:100%;
-border:none;
-border-radius:10px;
-background:#1e90ff;
-color:white;
-font-size:16px;
-}
+img{width:100%;border-radius:15px;margin-bottom:15px;}
+button{width:100%;padding:12px;border:none;border-radius:10px;background:#1e90ff;color:white;}
 </style>
-
 <script>
-function openMap(){
-window.open("https://www.google.com/maps?q=Wat+Phra+Kaew","_blank");
-}
+function openMap(){window.open("https://www.google.com/maps/place/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A8%E0%B8%A3%E0%B8%B5%E0%B8%A3%E0%B8%B1%E0%B8%95%E0%B8%99%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%94%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A1/@13.7514967,100.4900936,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2990eee7769e5:0x343cc1aab522fe88!8m2!3d13.7516435!4d100.4927041!16zL20vMDFjMWdq?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D");}
 </script>
-
 </head>
-
 <body>
-
-<div class="topbar">
-<button onclick="history.back()">←</button>
-<h2 style="margin-left:10px;">Wat Phra Kaew</h2>
-</div>
-
+<div class="topbar"><button onclick="history.back()">←</button><h2>wat phra kaew</h2></div>
 <div class="content">
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Wat_Phra_Kaew.jpg">
-
-<p><b>Highlight:</b> The most sacred temple in Thailand</p>
-<p><b>Time:</b> 08:30 AM – 03:30 PM</p>
-<p><b>Transport:</b> MRT Sanam Chai</p>
-
-<button class="map" onclick="openMap()">📍 Open in Google Maps</button>
-
+<img src="https://smarthistory.org/wp-content/uploads/2020/12/Temple-complex-Wat-Phra-Kaew.jpg">
+<p>Airport themed mall</p>
+<button onclick="openMap()">📍 Google Maps</button>
 </div>
-
 </body>
 </html>
