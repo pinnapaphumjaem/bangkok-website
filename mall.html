@@ -9,7 +9,6 @@ body{margin:0;font-family:sans-serif;background:#0b1d3a;color:white;}
 .card{background:#12294d;padding:15px;margin-bottom:10px;border-radius:10px;cursor:pointer;}
 .modal{display:none;position:fixed;width:100%;height:100%;background:rgba(0,0,0,0.8);justify-content:center;align-items:center;}
 .modal-content{background:#12294d;padding:20px;border-radius:10px;width:90%;}
-.close{color:#c6a75e;cursor:pointer;}
 </style>
 </head>
 <body>
@@ -25,20 +24,19 @@ body{margin:0;font-family:sans-serif;background:#0b1d3a;color:white;}
 <div class="card" onclick="show('terminal')">Terminal 21</div>
 </div>
 
-<div id="modal" class="modal"><div class="modal-content">
-<span class="close" onclick="hide()">← Back</span>
-<div id="data"></div>
-</div></div>
+<div id="modal" class="modal" onclick="hide()">
+<div class="modal-content" id="data"></div>
+</div>
 
 <script>
 function show(p){
 let d="";
-if(p==="siam"){d=`<h2>📍 Siam Paragon</h2><p>Luxury mall</p><p>10:00–22:00</p>`;}
-if(p==="iconsiam"){d=`<h2>📍 ICONSIAM</h2><p>Riverside mall</p><p>10:00–22:00</p>`;}
-if(p==="central"){d=`<h2>📍 CentralWorld</h2><p>Huge mall</p>`;}
-if(p==="mbk"){d=`<h2>📍 MBK</h2><p>Budget shopping</p>`;}
-if(p==="rama9"){d=`<h2>📍 Rama 9</h2><p>Business mall</p>`;}
-if(p==="terminal"){d=`<h2>📍 Terminal 21</h2><p>Airport theme</p>`;}
+if(p==="siam"){d=`📍 Siam Paragon<br>Luxury mall<br>10:00–22:00<br>BTS Siam`;}
+if(p==="iconsiam"){d=`📍 ICONSIAM<br>Riverside mall<br>10:00–22:00`;}
+if(p==="central"){d=`📍 CentralWorld<br>Large mall<br>10:00–22:00`;}
+if(p==="mbk"){d=`📍 MBK<br>Budget shopping<br>10:00–22:00`;}
+if(p==="rama9"){d=`📍 Rama 9<br>Business mall`;}
+if(p==="terminal"){d=`📍 Terminal 21<br>Airport theme mall`;}
 
 document.getElementById("data").innerHTML=d;
 document.getElementById("modal").style.display="flex";
