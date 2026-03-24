@@ -3,6 +3,11 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Terminal 21</title>
+
+.topbar button{
+  font-size:16px;
+  cursor:pointer;
+}
 <style>
 body{margin:0;background:#0b1d3a;color:white;font-family:sans-serif;}
 .topbar{display:flex;align-items:center;padding:15px;}
@@ -16,12 +21,15 @@ function openMap(){window.open("google.com/maps?sca_esv=231828c7d9589dfc&rlz=1C1
 </script>
 </head>
 <body>
-<div class="topbar"><button onclick="history.back()">←</button><h2>chatuchak Park</h2></div>
+<div class="topbar"><button onclick="history.back()">←</button><h2>CHATUCHAK PARK</h2></div>
 <div class="content">
 <img src="https://images.squarespace-cdn.com/content/v1/51a39504e4b093105c265c24/1598453920042-T740CWGSLUKYNNLTXTEH/chatuchak-park-bridge-color.jpg">
-<p>Highlight: Near Chatuchak Market / good for walking</p>
+<p>Highlight:Chatuchak Park is a tranquil green space located near the famous Chatuchak Weekend Market, making it a convenient retreat for visitors after a busy shopping experience. The park features shaded pathways, grassy lawns, and a serene lake, providing a calm and refreshing environment in the middle of a lively district.
+
+It is a popular spot for picnics, jogging, and casual outdoor activities. Families, students, and tourists often gather here to relax under the trees or enjoy the open space. Its accessibility via BTS and MRT makes it one of the most convenient parks to visit in Bangkok.</p>
 <p>Time: 04:30 AM – 10:00 PM</p>
-<p>Transport: BTS Mo Chit / MRT Chatuchak Park</p>
+<p>Transport: BTS Mo Chit</p> 
+           <p>MRT Chatuchak Park</p>
 <button onclick="openMap()">📍 Google Maps</button>
 </div>
 </body>
