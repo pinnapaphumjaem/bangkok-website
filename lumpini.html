@@ -3,6 +3,11 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Terminal 21</title>
+
+.topbar button{
+  font-size:16px;
+  cursor:pointer;
+}
 <style>
 body{margin:0;background:#0b1d3a;color:white;font-family:sans-serif;}
 .topbar{display:flex;align-items:center;padding:15px;}
@@ -15,12 +20,17 @@ function openMap(){window.open("https://www.google.com/maps?sca_esv=231828c7d958
 </script>
 </head>
 <body>
-<div class="topbar"><button onclick="history.back()">←</button><h2>lumpini park</h2></div>
+<div class="topbar"><button onclick="history.back()">←</button><h2>LUMPINI PARK</h2></div>
 <div class="content">
 <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/b8/3b/d3/lumpini-park-4.jpg?w=900&h=500&s=1">
-<p>Highlight: Large park for jogging and relaxing</p>
+<p>Highlight: Lumphini Park is the largest and most iconic public park in central Bangkok, serving as a vital green oasis amidst the city’s dense urban landscape. Established in the 1920s, the park covers a vast area filled with lush trees, open lawns, and a large artificial lake at its center. It provides a refreshing escape where visitors can relax, exercise, and reconnect with nature.
+
+The park is especially popular for outdoor activities such as jogging, cycling, yoga, and paddle boating. Early mornings and late afternoons are the most vibrant times, when locals gather for group exercises like aerobics and tai chi. One of its unique features is the presence of large monitor lizards, which can often be seen roaming freely near the lake, adding a distinctive character to the park.
+
+With its peaceful atmosphere, scenic views, and wide range of recreational options, Lumphini Park is not only a place for leisure but also an essential part of Bangkok’s urban lifestyle.</p>
 <p>Time: 04:30 AM – 10:00 PM</p>
-<p>Transport: BTS Sala Daeng / MRT Silom</p>
+<p>Transport: BTS Sala Daeng</p>
+          <p> MRT Silom</p>
 <button onclick="openMap()">📍 Google Maps</button>
 </div>
 </body>
