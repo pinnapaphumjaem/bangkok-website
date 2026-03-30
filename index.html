@@ -31,26 +31,83 @@ body{
   text-decoration:none;
   color:white;
 }
+
+.lang{
+  position:absolute;
+  top:20px;
+  right:20px;
+}
+
+button{
+  padding:6px 12px;
+  margin-left:5px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+}
 </style>
 
 </head>
 
 <body>
 
+<div class="lang">
+  <button onclick="setLang('en')">EN</button>
+  <button onclick="setLang('jp')">JP</button>
+</div>
+
 <div class="header">
-  <h1>MY CONCIERGE</h1>
-  <p style="margin-top:5px;opacity:0.7;">
+  <h1 id="title">MY CONCIERGE</h1>
+  <p id="hotel" style="margin-top:5px;opacity:0.7;">
     HILTON BANGKOK GRANDE ASOKE
   </p>
 </div>
 
 <div class="container">
-  <a href="historical.html" class="card">📍 Historical</a>
-  <a href="mall.html" class="card">🛍 Mall</a>
-  <a href="park.html" class="card">🌳 Park</a>
-  <a href="market.html" class="card">🛒 Market</a>
-  <a href="restaurant.html" class="card">🍽 Restaurant</a>
+  <a href="historical.html" class="card" id="historical">📍 Historical</a>
+  <a href="mall.html" class="card" id="mall">🛍 Mall</a>
+  <a href="park.html" class="card" id="park">🌳 Park</a>
+  <a href="market.html" class="card" id="market">🛒 Market</a>
+  <a href="restaurant.html" class="card" id="restaurant">🍽 Restaurant</a>
 </div>
+
+<script>
+const text = {
+
+  en:{
+    title:"MY CONCIERGE",
+    hotel:"HILTON BANGKOK GRANDE ASOKE",
+    historical:"📍 Historical",
+    mall:"🛍 Mall",
+    park:"🌳 Park",
+    market:"🛒 Market",
+    restaurant:"🍽 Restaurant"
+  },
+
+  jp:{
+    title:"マイ・コンシェルジュ",
+    hotel:"ヒルトン バンコク グランデ アソーク",
+    historical:"📍 歴史スポット",
+    mall:"🛍 ショッピングモール",
+    park:"🌳 公園",
+    market:"🛒 マーケット",
+    restaurant:"🍽 レストラン"
+  }
+
+}
+
+function setLang(lang){
+
+  document.getElementById("title").innerText=text[lang].title
+  document.getElementById("hotel").innerText=text[lang].hotel
+  document.getElementById("historical").innerText=text[lang].historical
+  document.getElementById("mall").innerText=text[lang].mall
+  document.getElementById("park").innerText=text[lang].park
+  document.getElementById("market").innerText=text[lang].market
+  document.getElementById("restaurant").innerText=text[lang].restaurant
+
+}
+</script>
 
 </body>
 </html>
