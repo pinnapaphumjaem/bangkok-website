@@ -44,9 +44,8 @@ button.langbtn{
   cursor:pointer;
 }
 </style>
-
 </head>
-<script src="language.js"></script>
+
 <body>
 
 <div class="lang">
@@ -56,74 +55,15 @@ button.langbtn{
 
 <div class="topbar">
 <button onclick="history.back()" style="background:none;border:none;color:white;font-size:20px;">←</button>
-
-<h2 id="title" style="margin-left:10px;">Historical</h2>
+<h2 data-key="historical" style="margin-left:10px;">Historical</h2>
 </div>
 
+<a href="grandpalace.html" class="card" data-key="grand">Grand Palace</a>
+<a href="watphra.html" class="card" data-key="phra">Wat Phra Kaew</a>
+<a href="watarun.html" class="card" data-key="arun">Wat Arun</a>
+<a href="watpho.html" class="card" data-key="pho">Wat Pho</a>
+<a href="watmangkon.html" class="card" data-key="mangkon">Wat Mangkon</a>
 
-<a href="grandpalace.html" class="card" id="grand">Grand Palace</a>
-
-<a href="watphra.html" class="card" id="phra">Wat Phra Kaew</a>
-
-<a href="watarun.html" class="card" id="arun">Wat Arun</a>
-
-<a href="watpho.html" class="card" id="pho">Wat Pho</a>
-
-<a href="watmangkon.html" class="card" id="mangkon">Wat Mangkon</a>
-
-
-
-<script>
-
-const text={
-
-en:{
- title:"Historical",
-
- grand:"Grand Palace",
-
- phra:"Wat Phra Kaew",
-
- arun:"Wat Arun",
-
- pho:"Wat Pho",
-
- mangkon:"Wat Mangkon"
-},
-
-jp:{
- title:"歴史スポット",
-
- grand:"王宮",
-
- phra:"ワット・プラケオ",
-
- arun:"ワット・アルン",
-
- pho:"ワット・ポー",
-
- mangkon:"ワット・マンコン"
-}
-
-}
-
-
-
-document.getElementById("title").innerText=text[lang].title
-
-document.getElementById("grand").innerText=text[lang].grand
-
-document.getElementById("phra").innerText=text[lang].phra
-
-document.getElementById("arun").innerText=text[lang].arun
-
-document.getElementById("pho").innerText=text[lang].pho
-
-document.getElementById("mangkon").innerText=text[lang].mangkon
-
-}
-
-</script>
-
+<script src="language.js"></script>
 </body>
 </html>
