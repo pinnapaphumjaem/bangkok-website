@@ -37,8 +37,6 @@ cursor:pointer;
 </style>
 
 </head>
-
-<script src="language.js"></script>
 <body>
 
 <div class="lang">
@@ -48,78 +46,16 @@ cursor:pointer;
 
 <div class="topbar">
 <button onclick="history.back()">←</button>
-<h2 id="title" style="margin-left:10px;">Market</h2>
+<h2 data-key="market" style="margin-left:10px;">Market</h2>
 </div>
 
-<a href="jodd.html" class="card" id="jodd">JODD FAIRS</a>
+<a href="jodd.html" class="card" data-key="jodd">JODD FAIRS</a>
+<a href="chinatown.html" class="card" data-key="china">Chinatown</a>
+<a href="asiaatique.html" class="card" data-key="asiatique">Asiatique</a>
+<a href="trainnight.html" class="card" data-key="train">Train Night Market</a>
+<a href="khaosan.html" class="card" data-key="khaosan">Khao San</a>
+<a href="chatuchakmar.html" class="card" data-key="chatuchak">Chatuchak Market</a>
 
-<a href="chinatown.html" class="card" id="china">Chinatown</a>
-
-<a href="asiaatique.html" class="card" id="asiatique">Asiatique</a>
-
-<a href="trainnight.html" class="card" id="train">Train Night Market</a>
-
-<a href="khaosan.html" class="card" id="khaosan">Khao San</a>
-
-<a href="chatuchakmar.html" class="card" id="chatuchak">Chatuchak Market</a>
-
-
-<script>
-
-const text={
-
-en:{
-title:"Market",
-
-jodd:"JODD FAIRS",
-
-china:"Chinatown",
-
-asiatique:"Asiatique",
-
-train:"Train Night Market",
-
-khaosan:"Khao San",
-
-chatuchak:"Chatuchak Market"
-},
-
-jp:{
-title:"マーケット",
-
-jodd:"ジョッドフェアーズ",
-
-china:"チャイナタウン",
-
-asiatique:"アジアティーク",
-
-train:"鉄道ナイトマーケット",
-
-khaosan:"カオサン通り",
-
-chatuchak:"チャトゥチャック市場"
-}
-
-}
-
-
-document.getElementById("title").innerText=text[lang].title
-
-document.getElementById("jodd").innerText=text[lang].jodd
-
-document.getElementById("china").innerText=text[lang].china
-
-document.getElementById("asiatique").innerText=text[lang].asiatique
-
-document.getElementById("train").innerText=text[lang].train
-
-document.getElementById("khaosan").innerText=text[lang].khaosan
-
-document.getElementById("chatuchak").innerText=text[lang].chatuchak
-
-}
-
-</script>
-
+<script src="language.js"></script>
 </body>
 </html>
