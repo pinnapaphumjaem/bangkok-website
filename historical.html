@@ -3,24 +3,128 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Historical</title>
+
 <style>
-body{margin:0;background:#0b1d3a;color:white;font-family:sans-serif;}
-.topbar{display:flex;align-items:center;padding:15px;}
-.card{background:#12294d;padding:15px;margin:10px;border-radius:10px;text-decoration:none;color:white;display:block;}
+body{
+  margin:0;
+  background:#0b1d3a;
+  color:white;
+  font-family:sans-serif;
+}
+
+.topbar{
+  display:flex;
+  align-items:center;
+  padding:15px;
+}
+
+.card{
+  background:#12294d;
+  padding:15px;
+  margin:10px;
+  border-radius:10px;
+  text-decoration:none;
+  color:white;
+  display:block;
+}
+
+.lang{
+  position:absolute;
+  right:15px;
+  top:15px;
+}
+
+button.langbtn{
+  background:#12294d;
+  border:none;
+  color:white;
+  padding:5px 10px;
+  margin-left:5px;
+  border-radius:6px;
+  cursor:pointer;
+}
 </style>
+
 </head>
+
 <body>
+
+<div class="lang">
+<button class="langbtn" onclick="setLang('en')">EN</button>
+<button class="langbtn" onclick="setLang('jp')">JP</button>
+</div>
 
 <div class="topbar">
 <button onclick="history.back()" style="background:none;border:none;color:white;font-size:20px;">←</button>
-<h2 style="margin-left:10px;">Historical</h2>
+
+<h2 id="title" style="margin-left:10px;">Historical</h2>
 </div>
 
-<a href="grandpalace.html" class="card">Grand Palace</a>
-<a href="watphra.html" class="card">Wat Phra Kaew</a>
-<a href="watarun.html" class="card">Wat Arun</a>
-<a href="watpho.html" class="card">Wat Pho</a>
-<a href="watmangkon.html" class="card">Wat Mangkon</a>
+
+<a href="grandpalace.html" class="card" id="grand">Grand Palace</a>
+
+<a href="watphra.html" class="card" id="phra">Wat Phra Kaew</a>
+
+<a href="watarun.html" class="card" id="arun">Wat Arun</a>
+
+<a href="watpho.html" class="card" id="pho">Wat Pho</a>
+
+<a href="watmangkon.html" class="card" id="mangkon">Wat Mangkon</a>
+
+
+
+<script>
+
+const text={
+
+en:{
+ title:"Historical",
+
+ grand:"Grand Palace",
+
+ phra:"Wat Phra Kaew",
+
+ arun:"Wat Arun",
+
+ pho:"Wat Pho",
+
+ mangkon:"Wat Mangkon"
+},
+
+jp:{
+ title:"歴史スポット",
+
+ grand:"王宮",
+
+ phra:"ワット・プラケオ",
+
+ arun:"ワット・アルン",
+
+ pho:"ワット・ポー",
+
+ mangkon:"ワット・マンコン"
+}
+
+}
+
+
+function setLang(lang){
+
+document.getElementById("title").innerText=text[lang].title
+
+document.getElementById("grand").innerText=text[lang].grand
+
+document.getElementById("phra").innerText=text[lang].phra
+
+document.getElementById("arun").innerText=text[lang].arun
+
+document.getElementById("pho").innerText=text[lang].pho
+
+document.getElementById("mangkon").innerText=text[lang].mangkon
+
+}
+
+</script>
 
 </body>
 </html>
