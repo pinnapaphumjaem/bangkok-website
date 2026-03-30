@@ -3,25 +3,123 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Market</title>
+
 <style>
 body{margin:0;background:#0b1d3a;color:white;font-family:sans-serif;}
+
 .topbar{display:flex;align-items:center;padding:15px;}
-.card{background:#12294d;padding:15px;margin:10px;border-radius:10px;text-decoration:none;color:white;display:block;}
+
+.card{
+background:#12294d;
+padding:15px;
+margin:10px;
+border-radius:10px;
+text-decoration:none;
+color:white;
+display:block;
+}
+
+.lang{
+position:absolute;
+top:15px;
+right:15px;
+}
+
+.langbtn{
+background:#12294d;
+border:none;
+color:white;
+padding:5px 10px;
+margin-left:5px;
+border-radius:6px;
+cursor:pointer;
+}
 </style>
+
 </head>
+
 <body>
+
+<div class="lang">
+<button class="langbtn" onclick="setLang('en')">EN</button>
+<button class="langbtn" onclick="setLang('jp')">JP</button>
+</div>
 
 <div class="topbar">
 <button onclick="history.back()">←</button>
-<h2 style="margin-left:10px;">Market</h2>
+<h2 id="title" style="margin-left:10px;">Market</h2>
 </div>
 
-<a href="jodd.html" class="card">JODD FAIRS</a>
-<a href="chinatown.html" class="card">Chinatown</a>
-<a href="asiaatique.html" class="card">Asiatique</a>
-<a href="trainnight.html" class="card">Train Night Market</a>
-<a href="khaosan.html" class="card">Khao San</a>
-<a href="chatuchakmar.html" class="card">Chatuchak Market</a>
+<a href="jodd.html" class="card" id="jodd">JODD FAIRS</a>
+
+<a href="chinatown.html" class="card" id="china">Chinatown</a>
+
+<a href="asiaatique.html" class="card" id="asiatique">Asiatique</a>
+
+<a href="trainnight.html" class="card" id="train">Train Night Market</a>
+
+<a href="khaosan.html" class="card" id="khaosan">Khao San</a>
+
+<a href="chatuchakmar.html" class="card" id="chatuchak">Chatuchak Market</a>
+
+
+<script>
+
+const text={
+
+en:{
+title:"Market",
+
+jodd:"JODD FAIRS",
+
+china:"Chinatown",
+
+asiatique:"Asiatique",
+
+train:"Train Night Market",
+
+khaosan:"Khao San",
+
+chatuchak:"Chatuchak Market"
+},
+
+jp:{
+title:"マーケット",
+
+jodd:"ジョッドフェアーズ",
+
+china:"チャイナタウン",
+
+asiatique:"アジアティーク",
+
+train:"鉄道ナイトマーケット",
+
+khaosan:"カオサン通り",
+
+chatuchak:"チャトゥチャック市場"
+}
+
+}
+
+function setLang(lang){
+
+document.getElementById("title").innerText=text[lang].title
+
+document.getElementById("jodd").innerText=text[lang].jodd
+
+document.getElementById("china").innerText=text[lang].china
+
+document.getElementById("asiatique").innerText=text[lang].asiatique
+
+document.getElementById("train").innerText=text[lang].train
+
+document.getElementById("khaosan").innerText=text[lang].khaosan
+
+document.getElementById("chatuchak").innerText=text[lang].chatuchak
+
+}
+
+</script>
 
 </body>
 </html>
