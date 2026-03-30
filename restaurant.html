@@ -46,63 +46,17 @@ cursor:pointer;
 
 <div class="topbar">
 <button onclick="history.back()">←</button>
-<h2 id="title" style="margin-left:10px;">Restaurant</h2>
+<h2 data-key="restaurant" style="margin-left:10px;">Restaurant</h2>
 </div>
 
-<a href="THEGOVERNOR.html" class="card" id="gov">THE GOVERNOR</a>
-<a href="baankhanitha.html" class="card" id="baan">Baan Khanitha</a>
-<a href="thelocal.html" class="card" id="local">The Local</a>
-<a href="manho.html" class="card" id="manho">Man Ho</a>
-<a href="indus.html" class="card" id="indus">Indus</a>
-<a href="salarimnaam.html" class="card" id="sala">Sala Rim Naam</a>
-<a href="Shakarik.html" class="card" id="shakarik">Shakarik</a>
+<a href="THEGOVERNOR.html" class="card" data-key="gov">THE GOVERNOR</a>
+<a href="baankhanitha.html" class="card" data-key="baan">Baan Khanitha</a>
+<a href="thelocal.html" class="card" data-key="local">The Local</a>
+<a href="manho.html" class="card" data-key="manho">Man Ho</a>
+<a href="indus.html" class="card" data-key="indus">Indus</a>
+<a href="salarimnaam.html" class="card" data-key="sala">Sala Rim Naam</a>
+<a href="Shakarik.html" class="card" data-key="shakarik">Shakarik</a>
 
-<script>
-const text={
-en:{
-title:"Restaurant",
-gov:"THE GOVERNOR",
-baan:"Baan Khanitha",
-local:"The Local",
-manho:"Man Ho",
-indus:"Indus",
-sala:"Sala Rim Naam",
-shakarik:"Shakarik"
-},
-
-jp:{
-title:"レストラン",
-gov:"ザ・ガバナー",
-baan:"バーン・カニタ",
-local:"ザ・ローカル",
-manho:"マンホー",
-indus:"インダス",
-sala:"サラ・リム・ナーム",
-shakarik:"シャカリキ"
-}
-}
-
-function setLang(lang){
-localStorage.setItem("lang", lang);
-applyLang(lang);
-}
-
-function applyLang(lang){
-document.getElementById("title").innerText=text[lang].title
-document.getElementById("gov").innerText=text[lang].gov
-document.getElementById("baan").innerText=text[lang].baan
-document.getElementById("local").innerText=text[lang].local
-document.getElementById("manho").innerText=text[lang].manho
-document.getElementById("indus").innerText=text[lang].indus
-document.getElementById("sala").innerText=text[lang].sala
-document.getElementById("shakarik").innerText=text[lang].shakarik
-}
-
-document.addEventListener("DOMContentLoaded", function(){
-let lang = localStorage.getItem("lang") || "en";
-applyLang(lang);
-});
-</script>
-
+<script src="language.js"></script>
 </body>
 </html>
