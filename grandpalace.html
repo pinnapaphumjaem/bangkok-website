@@ -2,69 +2,36 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grand Palace</title>
+<title>Terminal 21</title>
 
 <style>
 body{margin:0;background:#0b1d3a;color:white;font-family:sans-serif;}
 .topbar{display:flex;align-items:center;padding:15px;}
 .topbar button{
-  width:auto;
+  width:auto;        
   font-size:16px;
   cursor:pointer;
   padding:6px 10px;
 }
 .content{padding:20px;}
 img{width:100%;border-radius:15px;margin-bottom:15px;}
-button.map{width:100%;padding:12px;border:none;border-radius:10px;background:#1e90ff;color:white;}
-.lang{position:absolute;top:15px;right:15px;}
-.lang button{
-background:#12294d;
-border:none;
-color:white;
-padding:5px 10px;
-margin-left:5px;
-border-radius:6px;
-cursor:pointer;
-}
+button{width:100%;padding:12px;border:none;border-radius:10px;background:#1e90ff;color:white;}
 </style>
-
 <script>
-function openMap(){
-window.open("https://www.google.com/maps?q=grand+palace");
-}
+function openMap(){window.open("https://www.google.com/maps?q=grand+palace");}
 </script>
 </head>
-
 <body>
-
-<div class="lang">
-<button onclick="setLang('en')">EN</button>
-<button onclick="setLang('jp')">JP</button>
-</div>
-
-<div class="topbar">
-<button onclick="history.back()">←</button>
-<h2 data-key="grandpalace_title">Grand Palace</h2>
-</div>
-
+<div class="topbar"><button onclick="history.back()">←</button><h2>GRAND PALACE/h2></div>
 <div class="content">
 <img src="https://static.wixstatic.com/media/2cc94a_f41bf7cbf0d34a2faaf7f0e27aabb3b3~mv2.jpg">
-
-<p><b data-key="highlight">Highlight</b></p>
-<p data-key="grandpalace_desc"></p>
-
-<p><b data-key="admission">Admission Fee</b></p>
-<p data-key="gp_fee"></p>
-
-<p><b data-key="time">Time</b></p>
-<p data-key="gp_time"></p>
-
-<p><b data-key="direction">Direction</b></p>
-<p data-key="gp_direction"></p>
-
-<button class="map" onclick="openMap()" data-key="googlemaps">Google Maps</button>
+<p>Highlight: The Grand Palace is one of Thailand’s most important historical and cultural landmarks, attracting visitors from around the world. Built in 1782 during the reign of King Rama I, it served as the royal residence and administrative center for over a century. The complex showcases magnificent Thai architecture with golden spires and detailed murals. Within the palace grounds is Wat Phra Kaew, the Temple of the Emerald Buddha, Thailand’s most sacred religious image.</p>
+<p>Admission Fee:</p>
+<p>Foreigners: 500 THB per person</p>
+<p>Time: 08:30 AM – 03:30 PM</p>
+<p>Direction: 
+<p>MRT Sanam Chai (Exite 1) 10 minute walk (800 m)</p>   
+<button onclick="openMap()">📍 Google Maps</button>
 </div>
-
-<script src="language.js"></script>
 </body>
 </html>
