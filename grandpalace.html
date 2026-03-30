@@ -2,88 +2,36 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grand Palace</title>
+<title>Terminal 21</title>
 
 <style>
 body{margin:0;background:#0b1d3a;color:white;font-family:sans-serif;}
-.topbar{display:flex;align-items:center;padding:15px;gap:10px;}
+.topbar{display:flex;align-items:center;padding:15px;}
+.topbar button{
+  width:auto;        
+  font-size:16px;
+  cursor:pointer;
+  padding:6px 10px;
+}
 .content{padding:20px;}
 img{width:100%;border-radius:15px;margin-bottom:15px;}
-button{width:100%;padding:12px;border:none;border-radius:10px;background:#1e90ff;color:white;margin-top:10px;}
-.langbtn{width:auto;background:#444;padding:6px 10px;}
+button{width:100%;padding:12px;border:none;border-radius:10px;background:#1e90ff;color:white;}
 </style>
-
 <script>
-function openMap(){
-  window.open("https://www.google.com/maps?q=grand+palace");
-}
-
-const text = {
-  en: {
-    title: "GRAND PALACE",
-    highlight: "The Grand Palace is one of the most iconic and historically significant landmarks in Thailand, attracting millions of visitors from around the world each year. Located in the heart of Bangkok, it was established in 1782 during the reign of King Rama I, marking the beginning of the Rattanakosin era. For over 150 years, it served as the official residence of the Kings of Siam and the administrative center of the country.
-
-The palace complex is renowned for its breathtaking Thai architecture, featuring intricate details, golden spires, multi-tiered roofs, and elaborate decorations that reflect the highest level of Thai craftsmanship. The walls are adorned with murals depicting scenes from the Ramakien, Thailand’s national epic, showcasing the country’s rich cultural and artistic heritage.
-
-One of the most important highlights within the Grand Palace is Wat Phra Kaew, also known as the Temple of the Emerald Buddha. It houses the Emerald Buddha, Thailand’s most sacred religious statue, which is deeply revered by Thai people. The temple plays a significant role in royal ceremonies and spiritual life.
-
-With its historical importance, cultural richness, and stunning beauty, the Grand Palace stands as a powerful symbol of Thailand’s monarchy, religion, and national identity. Visiting this magnificent site offers a unique opportunity to experience the essence of Thai history and traditio.",
-    fee: "Admission Fee: 500 THB",
-    time: "Time: 08:30 – 15:30",
-    mrt: "MRT Sanam Chai Exit 1, walk 10 minutes",
-    map: "Google Maps"
-  },
-  jp: {
-    title: "王宮（グランドパレス）",
-    highlight: "グランドパレス（王宮）は、タイで最も象徴的で歴史的に重要なランドマークの一つであり、毎年世界中から何百万人もの観光客が訪れます。
-バンコクの中心部に位置し、1782年にラーマ1世の治世中に建立され、ラッタナコーシン時代の始まりを象徴しています。150年以上にわたり、シャム王国の王の公式住居および国の行政の中心として使用されていました。
-
-宮殿複合施設は、精巧な装飾、金色の尖塔、多層屋根など、タイ建築の最高レベルの職人技を反映した壮麗な建築で有名です。壁には、タイの国民的叙事詩「ラーマキエン」の場面を描いた壁画があり、タイの豊かな文化と芸術遺産を表しています。
-
-グランドパレス内で最も重要な見どころの一つが、エメラルド仏寺院として知られるワット・プラケオです。ここにはタイで最も神聖とされるエメラルド仏が安置されており、タイの人々に深く崇拝されています。この寺院は王室の儀式や精神的な生活において重要な役割を果たしています。
-
-歴史的重要性、文化的豊かさ、そして壮大な美しさを兼ね備えたグランドパレスは、タイの王室、宗教、そして国家のアイデンティティを象徴する存在です。この壮麗な場所を訪れることは、タイの歴史と伝統の本質を体験できる貴重な機会となります。",
-    fee: "入場料：500バーツ",
-    time: "営業時間：08:30 – 15:30",
-    mrt: "MRTサナームチャイ駅 出口1 徒歩10分",
-    map: "グーグルマップ"
-  }
-};
-
-function setLanguage(lang){
-  document.getElementById("title").innerText = text[lang].title;
-  document.getElementById("highlight").innerText = text[lang].highlight;
-  document.getElementById("fee").innerText = text[lang].fee;
-  document.getElementById("time").innerText = text[lang].time;
-  document.getElementById("mrt").innerText = text[lang].mrt;
-  document.getElementById("mapbtn").innerText = text[lang].map;
-}
+function openMap(){window.open("https://www.google.com/maps?q=grand+palace");}
 </script>
-
 </head>
 <body>
-
-<div class="topbar">
-<button onclick="history.back()">←</button>
-<h2 id="title">GRAND PALACE</h2>
-<button class="langbtn" onclick="setLanguage('en')">EN</button>
-<button class="langbtn" onclick="setLanguage('jp')">JP</button>
-</div>
-
+<div class="topbar"><button onclick="history.back()">←</button><h2>GRAND PALACE/h2></div>
 <div class="content">
 <img src="https://static.wixstatic.com/media/2cc94a_f41bf7cbf0d34a2faaf7f0e27aabb3b3~mv2.jpg">
-
-<p id="highlight"></p>
-<p id="fee"></p>
-<p id="time"></p>
-<p id="mrt"></p>
-
-<button id="mapbtn" onclick="openMap()">Google Maps</button>
+<p>Highlight: The Grand Palace is one of Thailand’s most important historical and cultural landmarks, attracting visitors from around the world. Built in 1782 during the reign of King Rama I, it served as the royal residence and administrative center for over a century. The complex showcases magnificent Thai architecture with golden spires and detailed murals. Within the palace grounds is Wat Phra Kaew, the Temple of the Emerald Buddha, Thailand’s most sacred religious image.</p>
+<p>Admission Fee:</p>
+<p>Foreigners: 500 THB per person</p>
+<p>Time: 08:30 AM – 03:30 PM</p>
+<p>Direction: 
+<p>MRT Sanam Chai (Exite 1) 10 minute walk (800 m)</p>   
+<button onclick="openMap()">📍 Google Maps</button>
 </div>
-
-<script>
-setLanguage('en');
-</script>
-
 </body>
 </html>
