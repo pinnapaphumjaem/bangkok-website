@@ -3,24 +3,115 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Park</title>
+
 <style>
 body{margin:0;background:#0b1d3a;color:white;font-family:sans-serif;}
+
 .topbar{display:flex;align-items:center;padding:15px;}
-.card{background:#12294d;padding:15px;margin:10px;border-radius:10px;text-decoration:none;color:white;display:block;}
+
+.card{
+background:#12294d;
+padding:15px;
+margin:10px;
+border-radius:10px;
+text-decoration:none;
+color:white;
+display:block;
+}
+
+.lang{
+position:absolute;
+top:15px;
+right:15px;
+}
+
+.langbtn{
+background:#12294d;
+border:none;
+color:white;
+padding:5px 10px;
+margin-left:5px;
+border-radius:6px;
+cursor:pointer;
+}
 </style>
+
 </head>
+
 <body>
+
+<div class="lang">
+<button class="langbtn" onclick="setLang('en')">EN</button>
+<button class="langbtn" onclick="setLang('jp')">JP</button>
+</div>
 
 <div class="topbar">
 <button onclick="history.back()">←</button>
-<h2 style="margin-left:10px;">Park</h2>
+<h2 id="title" style="margin-left:10px;">Park</h2>
 </div>
 
-<a href="lumpini.html" class="card">Lumpini Park</a>
-<a href="benjakitti.html" class="card">Benjakitti Park</a>
-<a href="chatuchak.html" class="card">Chatuchak Park</a>
-<a href="rotfai.html" class="card">Wachirabenchathat Park</a>
-<a href="benchasiri.html" class="card">Benchasiri Park</a>
+<a href="lumpini.html" class="card" id="lumpini">Lumpini Park</a>
+
+<a href="benjakitti.html" class="card" id="benjakitti">Benjakitti Park</a>
+
+<a href="chatuchak.html" class="card" id="chatuchak">Chatuchak Park</a>
+
+<a href="rotfai.html" class="card" id="rotfai">Wachirabenchathat Park</a>
+
+<a href="benchasiri.html" class="card" id="benchasiri">Benchasiri Park</a>
+
+
+<script>
+
+const text={
+
+en:{
+title:"Park",
+
+lumpini:"Lumpini Park",
+
+benjakitti:"Benjakitti Park",
+
+chatuchak:"Chatuchak Park",
+
+rotfai:"Wachirabenchathat Park",
+
+benchasiri:"Benchasiri Park"
+},
+
+jp:{
+title:"公園",
+
+lumpini:"ルンピニー公園",
+
+benjakitti:"ベンジャキティ公園",
+
+chatuchak:"チャトゥチャック公園",
+
+rotfai:"ワチラベンチャタート公園",
+
+benchasiri:"ベンチャシリ公園"
+}
+
+}
+
+function setLang(lang){
+
+document.getElementById("title").innerText=text[lang].title
+
+document.getElementById("lumpini").innerText=text[lang].lumpini
+
+document.getElementById("benjakitti").innerText=text[lang].benjakitti
+
+document.getElementById("chatuchak").innerText=text[lang].chatuchak
+
+document.getElementById("rotfai").innerText=text[lang].rotfai
+
+document.getElementById("benchasiri").innerText=text[lang].benchasiri
+
+}
+
+</script>
 
 </body>
 </html>
