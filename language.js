@@ -20,7 +20,20 @@ const text = {
     manho: "Man Ho",
     indus: "Indus",
     sala: "Sala Rim Naam",
-    shakarik: "Shakarik"
+    shakarik: "Shakarik",   // ต้องมี comma
+
+    grandpalace_title: "Grand Palace",
+    highlight: "Highlight",
+    admission: "Admission Fee",
+    time: "Time",
+    direction: "Direction",
+    googlemaps: "Google Maps",
+
+    grandpalace_desc: "The Grand Palace is one of Thailand’s most important historical and cultural landmarks, attracting visitors from around the world. Built in 1782 during the reign of King Rama I, it served as the royal residence and administrative center for over a century.",
+
+    gp_fee: "Foreigners: 500 THB per person",
+    gp_time: "08:30 AM – 03:30 PM",
+    gp_direction: "MRT Sanam Chai (Exit 1) 10 minute walk"
   },
 
   jp: {
@@ -44,7 +57,20 @@ const text = {
     manho: "マンホー",
     indus: "インダス",
     sala: "サラ・リム・ナーム",
-    shakarik: "シャカリキ"
+    shakarik: "シャカリキ",   // ต้องมี comma
+
+    grandpalace_title: "王宮",
+    highlight: "見どころ",
+    admission: "入場料",
+    time: "営業時間",
+    direction: "アクセス",
+    googlemaps: "グーグルマップ",
+
+    grandpalace_desc: "王宮はタイで最も重要な歴史的・文化的ランドマークの一つで、1782年にラーマ1世によって建設されました。",
+
+    gp_fee: "外国人：500バーツ",
+    gp_time: "08:30 – 15:30",
+    gp_direction: "MRTサナームチャイ駅 徒歩10分"
   }
 };
 
