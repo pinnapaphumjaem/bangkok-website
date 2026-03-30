@@ -29,7 +29,7 @@ const text = {
     direction: "Direction",
     googlemaps: "Google Maps",
 
-    grandpalace_desc: "The Grand Palace is one of Thailand’s most important historical and cultural landmarks, attracting visitors from around the world. Built in 1782 during the reign of King Rama I, it served as the royal residence and administrative center for over a century.",
+    grandpalace_desc: "The Grand Palace is one of Thailand’s most important historical and cultural landmarks, attracting visitors from around the world. Built in 1782 during the reign of King Rama I, it served as the royal residence and administrative center for over a century. The complex showcases magnificent Thai architecture with golden spires and detailed murals. Within the palace grounds is Wat Phra Kaew, the Temple of the Emerald Buddha, Thailand’s most sacred religious image.",
 
     gp_fee: "Foreigners: 500 THB per person",
     gp_time: "08:30 AM – 03:30 PM",
