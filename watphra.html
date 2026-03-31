@@ -17,7 +17,7 @@ background:#0b1d3a;
 color:white;
 }
 
-/* top bar layout */
+/* top bar */
 .topbar{
 display:grid;
 grid-template-columns:120px 1fr 120px;
@@ -44,7 +44,7 @@ font-weight:bold;
 text-align:center;
 }
 
-/* language button */
+/* ปุ่มภาษา */
 .lang{
 justify-self:end;
 }
@@ -59,33 +59,6 @@ background:white;
 color:black;
 font-weight:bold;
 }
-
-</style>
-
-</head>
-
-<body>
-
-<!-- top bar -->
-<div class="topbar">
-
-<div>
-<button class="backbtn" onclick="history.back()">◀</button>
-</div>
-
-<div class="title" data-key="phra_title">
-WAT PHRA KAEW
-</div>
-
-<div class="lang">
-<button onclick="setLang('en')">EN</button>
-<button onclick="setLang('jp')">JP</button>
-</div>
-
-</div>
-
-<script src="language.js"></script>
-
 
 /* content */
 .container{
@@ -124,47 +97,31 @@ text-decoration:none;
 
 </style>
 
+</head>
+
+
+<body>
+
+<!-- top bar -->
+<div class="topbar">
+
+<div>
+<button class="backbtn" onclick="history.back()">◀</button>
 </div>
 
-/* ปุ่มย้อนกลับ */
-.backbtn{
-font-size:14px;
-padding:6px 10px;
-background:white;
-color:black;
-border:none;
-border-radius:6px;
-cursor:pointer;
-}
+<div class="title" data-key="phra_title">
+WAT PHRA KAEW
+</div>
 
-/* title */
-.title{
-font-size:20px;
-font-weight:bold;
-text-align:center;
-}
+<div class="lang">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('jp')">JP</button>
+</div>
 
-/* language button */
-
-.lang{
-justify-self:end;
-}
-
-.lang button{
-margin-left:8px;
-padding:6px 12px;
-border:none;
-border-radius:6px;
-cursor:pointer;
-background:white;
-color:black;
-font-weight:bold;
-}
-
-</style>
+</div>
 
 
-
+<!-- content -->
 <div class="container">
 
 <img src="https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/62/2024/08/29074619/Wat-Phra-Kaew.jpg">
@@ -176,13 +133,10 @@ Highlight
 </div>
 
 <p data-key="phra_desc">
-
 Wat Phra Kaew is the most sacred temple in Thailand and a cornerstone of the nation’s spiritual and cultural identity. Located within the grounds of The Grand Palace, the temple houses the revered Emerald Buddha, a powerful symbol of prosperity, protection, and royal legitimacy. The statue, carved from a single block of jade, is highly respected by Thai people, and its seasonal costume changes are performed by the King in an important royal ceremony. The temple is also famous for its exquisite Ramakien murals that decorate the surrounding gallery walls. These detailed paintings illustrate scenes from Thailand’s national epic, portraying heroic battles, mythical beings, and moral lessons that reflect Thai beliefs and cultural values. With its dazzling golden architecture, intricate craftsmanship, and deep spiritual significance, Wat Phra Kaew is one of the most extraordinary cultural treasures in Thailand.
-
 </p>
 
 </div>
-
 
 
 <div class="section">
@@ -198,7 +152,6 @@ Foreigners: 500 THB per person
 </div>
 
 
-
 <div class="section">
 
 <div class="label" data-key="time">
@@ -210,7 +163,6 @@ Time
 </p>
 
 </div>
-
 
 
 <div class="section">
@@ -226,21 +178,15 @@ MRT Sanam Chai (Exit 1) 10 minute walk
 </div>
 
 
-
 <div class="section map">
 
-<a href="https://www.google.com/maps?sca_esv=8d67f07cd29c129e&biw=1366&bih=641&output=search&q=wat+phra+kaew+map&source=lnms&fbs=ADc_l-Z_HX6DfQ3PCMKeWs7ChzOv6B6OKmEmOLkYhSz8IK_EoS75VFtn_9ddqbQYCCltiNPW2ZNk5IkfMvQXgKZtLEcIr1P5brd5PWYUlMeVWJzrsCoa6d9BDRc0XWibpqPFLtbeMBJhLPY_T6C9sNtyHTrbWx3Fr0MDjfzx2JbQctSHxJNGiY8eOelEp9EHbDG1JvELjXe0BdWVAnErvFm_rwC6mBBcXqLtgSxSqVczLxLoD92kWC4&entry=mc&ved=1t:200715&ictx=111"
-data-key="googlemaps">
-
+<a href="https://www.google.com/maps?q=wat+phra+kaew" target="_blank" data-key="googlemaps">
 Google Maps
-
 </a>
 
 </div>
 
-
 </div>
-
 
 
 <script src="language.js"></script>
