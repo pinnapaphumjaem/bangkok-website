@@ -2,6 +2,15 @@
 </body>
 <button onclick="alert(localStorage.getItem('lang'))">
 check lang
+<div class="lang">
+  <button class="langbtn" onclick="setLang('en')">EN</button>
+  <button class="langbtn" onclick="setLang('jp')">JP</button>
+
+  <!-- test button -->
+  <button onclick="alert(localStorage.getItem('lang'))">
+    check lang
+  </button>
+</div>
 </button>
 </html>
 const text = {
