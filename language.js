@@ -1,3 +1,6 @@
+<script src="language.js"></script>
+</body>
+</html>
 const text = {
   en: {
     title_home: "MY CONCIERGE",
