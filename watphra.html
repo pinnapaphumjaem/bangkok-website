@@ -21,17 +21,56 @@ button{width:100%;padding:12px;border:none;border-radius:10px;background:#1e90ff
 function openMap(){window.open("https://www.google.com/maps/place/%E0%B8%A7%E0%B8%B1%E0%B8%94%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A8%E0%B8%A3%E0%B8%B5%E0%B8%A3%E0%B8%B1%E0%B8%95%E0%B8%99%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%94%E0%B8%B2%E0%B8%A3%E0%B8%B2%E0%B8%A1/@13.7514967,100.4900936,17z/data=!3m1!4b1!4m6!3m5!1s0x30e2990eee7769e5:0x343cc1aab522fe88!8m2!3d13.7516435!4d100.4927041!16zL20vMDFjMWdq?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D");}
 </script>
 </head>
+
+<script src="language.js"></script>
+  
 <body>
-<div class="topbar"><button onclick="history.back()">←</button><h2>WAT PHRA KAEW</h2></div>
+<div class="lang">
+  <button class="langbtn" onclick="setLang('en')">EN</button>
+  <button class="langbtn" onclick="setLang('jp')">JP</button>
+</div>
+<div class="topbar"><button onclick="history.back()">←</button><h2 data-key="phra_title">WAT PHRA KAEW</h2></div>
 <div class="content">
 <img src="https://d2e5ushqwiltxm.cloudfront.net/wp-content/uploads/sites/62/2024/08/29074619/Wat-Phra-Kaew.jpg">
-<p>Highlight: Wat Phra Kaew is the most sacred temple in Thailand and a cornerstone of the nation’s spiritual and cultural identity. Located within the grounds of The Grand Palace, the temple houses the revered Emerald Buddha, a powerful symbol of prosperity, protection, and royal legitimacy. The statue, carved from a single block of jade, is highly respected by Thai people, and its seasonal costume changes are performed by the King in an important royal ceremony.
-The temple is also famous for its exquisite Ramakien murals that decorate the surrounding gallery walls. These detailed paintings illustrate scenes from Thailand’s national epic, portraying heroic battles, mythical beings, and moral lessons that reflect Thai beliefs and cultural values. With its dazzling golden architecture, intricate craftsmanship, and deep spiritual significance, Wat Phra Kaew is one of the most extraordinary cultural treasures in Thailand.</p>
-<p>Admission Fee:</p>
-<p>Foreigners: 500 THB per person</p>
-<p>Time: 08:30 AM – 03:30 PM</p>
-<p>Direction: 
-<p>MRT Sanam Chai (Exite 1) 10 minute walk (800 m)</p>   
+<div class="topbar">
+  <button onclick="history.back()">←</button>
+  <h2 data-key="phra_title">WAT PHRA KAEW</h2>
+</div>
+
+<div class="content">
+
+<p data-key="phra_desc">Highlight:<div class="topbar">
+  <button onclick="history.back()">←</button>
+  <h2 data-key="phra_title">WAT PHRA KAEW</h2>
+</div>
+
+<div class="content">
+
+<p data-key="phra_desc">Highlight:Wat Phra Kaew is the most sacred temple in Thailand and a cornerstone of the nation’s spiritual and cultural identity. Located within the grounds of The Grand Palace, the temple houses the revered Emerald Buddha, a powerful symbol of prosperity, protection, and royal legitimacy. The statue, carved from a single block of jade, is highly respected by Thai people, and its seasonal costume changes are performed by the King in an important royal ceremony. The temple is also famous for its exquisite Ramakien murals that decorate the surrounding gallery walls. These detailed paintings illustrate scenes from Thailand’s national epic, portraying heroic battles, mythical beings, and moral lessons that reflect Thai beliefs and cultural values. With its dazzling golden architecture, intricate craftsmanship, and deep spiritual significance, Wat Phra Kaew is one of the most extraordinary cultural treasures in Thailand.</p>
+
+<p data-key="fee_title">Admission Fee:</p>
+<p data-key="fee_detail">Foreigners: 500 THB per person</p>
+
+<p data-key="time">Time: 08:30 AM – 03:30 PM</p>
+
+<p data-key="direction_title">Direction:</p>
+<p data-key="direction_detail">MRT Sanam Chai (Exit 1)...</p>
+
+<button data-key="map_btn" onclick="openMap()">📍 Google Maps</button>
+
+</div></p>
+
+<p data-key="fee_title">Admission Fee:</p>
+<p data-key="fee_detail">Foreigners: 500 THB per person</p>
+
+<p data-key="time">Time: 08:30 AM – 03:30 PM</p>
+
+<p data-key="direction_title">Direction:</p>
+<p data-key="direction_detail">MRT Sanam Chai (Exit 1)</p>
+
+<button data-key="map_btn" onclick="openMap()">📍 Google Maps</button>
+
+</div>
 <button onclick="openMap()">📍 Google Maps</button>
 </div>
 </body>
