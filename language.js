@@ -1,5 +1,3 @@
-</body>
-
 <div class="lang">
   <button class="langbtn" onclick="setLang('en')">EN</button>
   <button class="langbtn" onclick="setLang('jp')">JP</button>
@@ -9,8 +7,7 @@
     check
   </button>
 </div>
-</button>
-</html>
+  
 const text = {
   en: {
     title_home: "MY CONCIERGE",
