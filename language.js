@@ -1,4 +1,3 @@
-<script src="language.js"></script>
 </body>
 <button onclick="alert(localStorage.getItem('lang'))">
 check lang
