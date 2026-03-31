@@ -9,6 +9,21 @@
 
 <style>
 
+/* ปุ่มย้อนกลับ */
+.backbtn{
+position:absolute;
+left:15px;
+top:15px;
+font-size:14px;
+padding:6px 10px;
+background:white;
+color:black;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* พื้นหลังเว็บ */
 body{
 margin:0;
 font-family:sans-serif;
@@ -87,8 +102,11 @@ text-decoration:none;
 
 <body>
 
-<!-- top bar -->
+<!-- ปุ่มย้อนกลับ -->
+<button class="backbtn" onclick="history.back()">◀</button>
 
+
+<!-- top bar -->
 <div class="topbar">
 
 <div class="title" data-key="phra_title">
@@ -168,7 +186,7 @@ MRT Sanam Chai (Exit 1) 10 minute walk
 
 <div class="section map">
 
-<a href="https://maps.app.goo.gl/Xx7bT3n6s6p2L8zP8" target="_blank"
+<a href="https://www.google.com/maps?sca_esv=8d67f07cd29c129e&biw=1366&bih=641&output=search&q=wat+phra+kaew+map&source=lnms&fbs=ADc_l-Z_HX6DfQ3PCMKeWs7ChzOv6B6OKmEmOLkYhSz8IK_EoS75VFtn_9ddqbQYCCltiNPW2ZNk5IkfMvQXgKZtLEcIr1P5brd5PWYUlMeVWJzrsCoa6d9BDRc0XWibpqPFLtbeMBJhLPY_T6C9sNtyHTrbWx3Fr0MDjfzx2JbQctSHxJNGiY8eOelEp9EHbDG1JvELjXe0BdWVAnErvFm_rwC6mBBcXqLtgSxSqVczLxLoD92kWC4&entry=mc&ved=1t:200715&ictx=111"
 data-key="googlemaps">
 
 Google Maps
