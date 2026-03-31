@@ -20,28 +20,11 @@ color:white;
 /* top bar layout */
 .topbar{
 display:grid;
-grid-template-columns: 120px 1fr 120px;
+grid-template-columns:120px 1fr 120px;
 align-items:center;
 padding:20px;
 background:#07142b;
 }
-
-<div class="topbar">
-
-<div class="back-area">
-<button class="backbtn" onclick="history.back()">◀</button>
-</div>
-
-<div class="title" data-key="phra_title">
-WAT PHRA KAEW
-</div>
-
-<div class="lang">
-<button onclick="setLang('en')">EN</button>
-<button onclick="setLang('jp')">JP</button>
-</div>
-
-</div>
 
 /* ปุ่มย้อนกลับ */
 .backbtn{
@@ -76,6 +59,33 @@ background:white;
 color:black;
 font-weight:bold;
 }
+
+</style>
+
+</head>
+
+<body>
+
+<!-- top bar -->
+<div class="topbar">
+
+<div>
+<button class="backbtn" onclick="history.back()">◀</button>
+</div>
+
+<div class="title" data-key="phra_title">
+WAT PHRA KAEW
+</div>
+
+<div class="lang">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('jp')">JP</button>
+</div>
+
+</div>
+
+<script src="language.js"></script>
+
 
 /* content */
 .container{
